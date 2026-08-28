@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bita, una agencia de turismo para descubrir destinos inolvidables.">
+  <title>BITA | Agencia de turismo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <header class="encabezado">
+    <div class="contenedor encabezado-contenido">
+      <div class="marca">
+        <button class="icono-cabecera avion" type="button" data-accion="ir-destinos" aria-label="Ver destinos"><span aria-hidden="true">✈</span><small>Destinos</small></button>
+        <a class="marca-texto" href="#inicio" aria-label="BITA, inicio"><i></i>BITA<i></i></a>
+        <button class="icono-cabecera valija" type="button" data-accion="abrir-carrito" aria-label="Abrir carrito"><span class="asa-valija" aria-hidden="true"></span><span class="cuerpo-valija" aria-hidden="true">▣</span><small>Mi carrito <b id="contador-carrito">0</b></small></button>
+      </div>
+      <button class="boton-menu" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
+      <nav class="menu-principal" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#viajes">Viajes</a>
+        <a href="#paquetes">Paquetes</a>
+        <a href="#nosotros">Nosotros</a>
+      </nav>
+      <div class="acciones-cuenta">
+        <button type="button" class="selector-moneda" data-accion="cambiar-moneda"><span>Moneda</span><b>USD</b></button>
+        <button type="button" class="boton-cuenta" data-accion="abrir-login"><span class="usuario-icono">◉</span> Ingresar</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="contenedor hero-contenido">
+        <p class="etiqueta">Tu próxima aventura empieza acá</p>
+        <h1>Viajá a lugares <span>increíbles</span></h1>
+        <p class="hero-texto">Armamos escapadas, vacaciones y experiencias únicas para que solamente te ocupes de disfrutar.</p>
+        <button class="boton boton-principal" type="button" data-accion="mostrar-buscador">Buscar mi viaje</button>
+      </div>
+    </section>
+
+    <section class="paquetes seccion" id="paquetes" aria-labelledby="titulo-paquetes">
+      <div class="contenedor">
+        <div class="titulo-seccion"><p>Promociones exclusivas</p><h2 id="titulo-paquetes">Paquetes listos para despegar</h2></div>
+        <div class="paquetes-contenido">
+          <article class="paquete paquete-poland" data-paquete="Escapada Polonia" data-precio="1167" data-noches="6 días">
+            <div class="paquete-foto"><span class="chip">Más elegido</span></div>
+            <div class="paquete-info"><p class="paquete-destino">EUROPA CENTRAL</p><h3>Escapada a Polonia</h3><p>Hotel + vuelo + desayuno</p><div class="paquete-pie"><strong>USD 1.167</strong><span>por persona</span></div><button type="button" class="boton-agregar" data-accion="agregar-carrito">Agregar al carrito</button></div>
+          </article>
+          <article class="paquete paquete-spain" data-paquete="España Premium" data-precio="6767" data-noches="14 días">
+            <div class="paquete-foto"><span class="chip">Primera clase</span></div>
+            <div class="paquete-info"><p class="paquete-destino">MEDITERRÁNEO</p><h3>España Premium</h3><p>Vuelo primera clase + hotel + experiencias</p><div class="paquete-pie"><strong>USD 6.767</strong><span>por persona</span></div><button type="button" class="boton-agregar" data-accion="agregar-carrito">Agregar al carrito</button></div>
+          </article>
+          <aside class="beneficios"><h3>Tu viaje, protegido</h3><p>Todos los paquetes incluyen asistencia antes y durante tu aventura.</p><ul><li>✓ Atención personalizada</li><li>✓ Cuotas y medios de pago</li><li>✓ Cancelación flexible</li><li>✓ Soporte 24/7</li></ul><button type="button" class="enlace-asistencia" data-accion="mostrar-asistencia">¿Necesitás ayuda?</button></aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="destacados seccion" aria-labelledby="titulo-destacados">
+      <div class="contenedor">
+        <div class="titulo-seccion">
+          <p>Elegí tu destino</p>
+          <h2 id="titulo-destacados">Viajes destacados</h2>
+        </div>
+        <div class="barra-herramientas">
+          <button class="filtro activo" type="button" data-filtro="todos">Todos</button>
+          <button class="filtro" type="button" data-filtro="europa">Europa</button>
+          <button class="filtro" type="button" data-filtro="sudamerica">Sudamérica</button>
+          <button class="filtro" type="button" data-filtro="asia">Asia</button>
+          <button class="filtro" type="button" data-filtro="africa">África</button>
+          <button class="filtro" type="button" data-filtro="oceania">Oceanía</button>
+          <button class="boton-favoritos" type="button" data-accion="ver-favoritos">♡ Favoritos <span id="contador-favoritos">0</span></button>
+        </div>
+        <div class="filtros-avanzados"><label>Presupuesto <select id="filtro-precio"><option value="todos">Cualquier precio</option><option value="1200">Hasta USD 1.200</option><option value="2000">Hasta USD 2.000</option></select></label><label>Duración <select id="filtro-duracion"><option value="todos">Cualquier duración</option><option value="corta">Hasta 7 días</option><option value="larga">Más de 7 días</option></select></label><label>Tipo <select id="filtro-tipo"><option value="todos">Todos los viajes</option><option>Aventura</option><option>Cultural</option><option>Relax</option></select></label><label>Pasajeros <select id="pasajeros"><option>1 pasajero</option><option>2 pasajeros</option><option>3 pasajeros</option><option>4+ pasajeros</option></select></label></div>
+        <div class="tarjetas-destinos">
+          <article class="tarjeta-destino polonia" data-region="europa" data-destino="Polonia" data-precio="USD 1.200">
+            <div class="imagen-destino"><span class="chip">Europa</span></div>
+            <div class="info-destino"><h3>Viaje a Polonia</h3><p>Historia, cultura y paisajes inolvidables.</p><span>Desde USD 1.200</span><div class="acciones-tarjeta"><button type="button" class="detalle" data-accion="detalle">Ver detalle</button><button type="button" class="corazon" aria-label="Agregar Polonia a favoritos" data-accion="favorito">♡</button></div></div>
+          </article>
+          <article class="tarjeta-destino bolivia" data-region="sudamerica" data-destino="Bolivia" data-precio="USD 990">
+            <div class="imagen-destino"><span class="chip">Sudamérica</span></div>
+            <div class="info-destino"><h3>Viaje a Bolivia</h3><p>Naturaleza, altura y aventura pura.</p><span>Desde USD 990</span><div class="acciones-tarjeta"><button type="button" class="detalle" data-accion="detalle">Ver detalle</button><button type="button" class="corazon" aria-label="Agregar Bolivia a favoritos" data-accion="favorito">♡</button></div></div>
+          </article>
+          <article class="tarjeta-destino suiza" data-region="europa" data-destino="Suiza" data-precio="USD 2.100">
+            <div class="imagen-destino"><span class="chip">Europa</span></div>
+            <div class="info-destino"><h3>Viaje a Suiza</h3><p>Postales alpinas en cada recorrido.</p><span>Desde USD 2.100</span><div class="acciones-tarjeta"><button type="button" class="detalle" data-accion="detalle">Ver detalle</button><button type="button" class="corazon" aria-label="Agregar Suiza a favoritos" data-accion="favorito">♡</button></div></div>
+          </article>
+          <article class="tarjeta-destino japon" data-region="asia" data-destino="Japón" data-precio="USD 2.850"><div class="imagen-destino"><span class="chip">Asia</span></div><div class="info-destino"><h3>Viaje a Japón</h3><p>Tradición, tecnología y cerezos en flor.</p><span>Desde USD 2.850</span><div class="acciones-tarjeta"><button type="button" class="detalle" data-accion="detalle">Ver detalle</button><button type="button" class="corazon" data-accion="favorito">♡</button></div></div></article>
+          <article class="tarjeta-destino brasil" data-region="sudamerica" data-destino="Brasil" data-precio="USD 780"><div class="imagen-destino"><span class="chip">Sudamérica</span></div><div class="info-destino"><h3>Escapada a Brasil</h3><p>Playas, música y el calor de Río.</p><span>Desde USD 780</span><div class="acciones-tarjeta"><button type="button" class="detalle" data-accion="detalle">Ver detalle</button><button type="button" class="corazon" data-accion="favorito">♡</button></div></div></article>
+          <article class="tarjeta-destino italia" data-region="europa" data-destino="Italia" data-precio="USD 1.950"><div class="imagen-destino"><span class="chip">Europa</span></div><div class="info-destino"><h3>Sabores de Italia</h3><p>Roma, Florencia y Venecia en un viaje.</p><span>Desde USD 1.950</span><div class="acciones-tarjeta"><button type="button" class="detalle" data-accion="detalle">Ver detalle</button><button type="button" class="corazon" data-accion="favorito">♡</button></div></div></article>
+          <article class="tarjeta-destino mexico" data-region="norteamerica" data-destino="México" data-precio="USD 1.050"><div class="imagen-destino"><span class="chip">América</span></div><div class="info-destino"><h3>México Caribe</h3><p>Resorts, cenotes y cultura maya.</p><span>Desde USD 1.050</span><div class="acciones-tarjeta"><button type="button" class="detalle" data-accion="detalle">Ver detalle</button><button type="button" class="corazon" data-accion="favorito">♡</button></div></div></article>
+          <article class="tarjeta-destino egipto" data-region="africa" data-destino="Egipto" data-precio="USD 2.300"><div class="imagen-destino"><span class="chip">África</span></div><div class="info-destino"><h3>Misterios de Egipto</h3><p>Pirámides, Nilo y templos milenarios.</p><span>Desde USD 2.300</span><div class="acciones-tarjeta"><button type="button" class="detalle" data-accion="detalle">Ver detalle</button><button type="button" class="corazon" data-accion="favorito">♡</button></div></div></article>
+          <article class="tarjeta-destino australia" data-region="oceania" data-destino="Australia" data-precio="USD 3.400"><div class="imagen-destino"><span class="chip">Oceanía</span></div><div class="info-destino"><h3>Aventura en Australia</h3><p>Ciudades vibrantes y naturaleza salvaje.</p><span>Desde USD 3.400</span><div class="acciones-tarjeta"><button type="button" class="detalle" data-accion="detalle">Ver detalle</button><button type="button" class="corazon" data-accion="favorito">♡</button></div></div></article>
+          <article class="tarjeta-destino tailandia" data-region="asia" data-destino="Tailandia" data-precio="USD 1.690"><div class="imagen-destino"><span class="chip">Asia</span></div><div class="info-destino"><h3>Tailandia esencial</h3><p>Templos, sabores y playas tropicales.</p><span>Desde USD 1.690</span><div class="acciones-tarjeta"><button type="button" class="detalle">Ver detalle</button><button type="button" class="corazon">♡</button></div></div></article>
+          <article class="tarjeta-destino corea" data-region="asia" data-destino="Corea del Sur" data-precio="USD 2.490"><div class="imagen-destino"><span class="chip">Asia</span></div><div class="info-destino"><h3>Corea del Sur</h3><p>Seúl, tradición y cultura contemporánea.</p><span>Desde USD 2.490</span><div class="acciones-tarjeta"><button type="button" class="detalle">Ver detalle</button><button type="button" class="corazon">♡</button></div></div></article>
+          <article class="tarjeta-destino marruecos" data-region="africa" data-destino="Marruecos" data-precio="USD 1.780"><div class="imagen-destino"><span class="chip">África</span></div><div class="info-destino"><h3>Colores de Marruecos</h3><p>Medinas, desierto y noches mágicas.</p><span>Desde USD 1.780</span><div class="acciones-tarjeta"><button type="button" class="detalle">Ver detalle</button><button type="button" class="corazon">♡</button></div></div></article>
+          <article class="tarjeta-destino kenia" data-region="africa" data-destino="Kenia" data-precio="USD 3.150"><div class="imagen-destino"><span class="chip">África</span></div><div class="info-destino"><h3>Safari en Kenia</h3><p>Fauna salvaje y paisajes de sabana.</p><span>Desde USD 3.150</span><div class="acciones-tarjeta"><button type="button" class="detalle">Ver detalle</button><button type="button" class="corazon">♡</button></div></div></article>
+          <article class="tarjeta-destino nueva-zelanda" data-region="oceania" data-destino="Nueva Zelanda" data-precio="USD 3.650"><div class="imagen-destino"><span class="chip">Oceanía</span></div><div class="info-destino"><h3>Nueva Zelanda</h3><p>Glaciares, fiordos y rutas épicas.</p><span>Desde USD 3.650</span><div class="acciones-tarjeta"><button type="button" class="detalle">Ver detalle</button><button type="button" class="corazon">♡</button></div></div></article>
+        </div>
+        <a class="enlace-viajes" href="#viajes">Ver todos los viajes <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <section class="ofertas seccion"><div class="contenedor oferta-contenido"><div><p class="etiqueta">Último momento</p><h2>Oferta relámpago: Bolivia</h2><p>Reservá hoy y obtené 15% de descuento en la próxima salida.</p></div><div class="reloj"><span id="horas">08</span>:<span id="minutos">00</span>:<span id="segundos">00</span><small>horas &nbsp;&nbsp; minutos &nbsp;&nbsp; segundos</small></div><button class="boton boton-principal" type="button" data-accion="oferta">Aprovechar oferta</button></div></section>
+
+    <section class="viajes seccion" id="viajes" aria-labelledby="titulo-viajes">
+      <div class="contenedor">
+        <div class="titulo-seccion titulo-claro">
+          <p>Viajes a grandes países</p>
+          <h2 id="titulo-viajes">Encontrá tu próxima experiencia</h2>
+        </div>
+        <article class="ficha-viaje ficha-bolivia">
+          <div class="foto-ficha" role="img" aria-label="Playa tropical de Bolivia"></div>
+          <div class="detalle-ficha"><div class="ficha-cabecera"><h3>Viaje a Bolivia</h3><strong>USD 990</strong></div><p>Conocé Bolivia a través de un viaje que incluye hoteles seleccionados, transporte y visitas a destinos turísticos. Explorá el Salar de Uyuni, La Paz y paisajes naturales únicos.</p><ul><li>7 noches de alojamiento</li><li>Desayunos incluidos</li><li>Traslados y excursiones</li></ul><button class="boton boton-claro consultar" type="button" data-destino="Bolivia">Consultar viaje</button></div>
+        </article>
+        <article class="ficha-viaje ficha-polonia">
+          <div class="foto-ficha" role="img" aria-label="Parque junto a un lago en Polonia"></div>
+          <div class="detalle-ficha"><div class="ficha-cabecera"><h3>Viaje a Polonia</h3><strong>USD 1.200</strong></div><p>Viajá a Polonia con alojamiento en hoteles, desayunos, traslados y excursiones opcionales. Visitá ciudades como Varsovia y Cracovia, sus castillos y su deliciosa gastronomía.</p><ul><li>8 noches de alojamiento</li><li>Tour por Varsovia y Cracovia</li><li>Guía en español</li></ul><button class="boton boton-claro consultar" type="button" data-destino="Polonia">Consultar viaje</button></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="nosotros seccion" id="nosotros">
+      <div class="contenedor nosotros-contenido"><div><p class="etiqueta">Viajamos con vos</p><h2>Una agencia hecha para quienes sueñan con conocer el mundo.</h2></div><div class="numeros"><p><b>+12</b> años creando recuerdos</p><p><b>+8.000</b> viajeros felices</p><p><b>24/7</b> acompañamiento</p></div></div>
+    </section>
+    <section class="resenas seccion"><div class="contenedor"><div class="titulo-seccion"><p>Experiencias reales</p><h2>Lo que cuentan nuestros viajeros</h2></div><div class="lista-resenas"><article>★★★★★<p>“Todo salió perfecto. La atención antes y durante el viaje fue excelente.”</p><strong>— Camila, Polonia</strong></article><article>★★★★★<p>“Un viaje inolvidable, con excursiones muy bien organizadas.”</p><strong>— Martín, Bolivia</strong></article><article>★★★★★<p>“La propuesta superó nuestras expectativas. Volveríamos a elegir BITA.”</p><strong>— Lucía, España</strong></article></div></div></section>
+    <section class="faq seccion"><div class="contenedor"><div class="titulo-seccion"><p>Antes de viajar</p><h2>Preguntas frecuentes</h2></div><div class="preguntas"><button class="pregunta">¿Qué incluye el precio del paquete?<span>+</span></button><p>Incluye los servicios detallados en cada paquete. Los impuestos estimados se muestran en el carrito.</p><button class="pregunta">¿Puedo pagar en cuotas?<span>+</span></button><p>Sí, tenemos alternativas de pago y cuotas para que puedas viajar sin preocuparte.</p><button class="pregunta">¿Puedo cancelar o cambiar mi fecha?<span>+</span></button><p>Depende de la tarifa elegida y de los servicios contratados. Te explicamos las condiciones antes de confirmar.</p><button class="pregunta">¿Necesito visa para viajar?<span>+</span></button><p>Los requisitos dependen de tu nacionalidad y del destino. Nuestro equipo te orienta antes de emitir la reserva.</p><button class="pregunta">¿Puedo viajar con menores?<span>+</span></button><p>Sí. Indicá la edad de cada pasajero al cotizar para recibir las alternativas adecuadas.</p><button class="pregunta">¿Qué pasa si el vuelo se modifica?<span>+</span></button><p>Te acompañamos con las reprogramaciones y buscamos la mejor solución junto con la aerolínea.</p></div></div></section>
+    <section class="explorar seccion"><div class="contenedor"><div class="titulo-seccion"><p>Elegí mejor</p><h2>Compará y encontrá tu viaje ideal</h2></div><div class="herramientas-viaje"><div class="comparador"><h3>Comparador de destinos</h3><select id="comparar-a"><option value="">Elegí un destino</option><option>Japón</option><option>Italia</option><option>Marruecos</option><option>Australia</option></select><select id="comparar-b"><option value="">Elegí otro destino</option><option>Corea del Sur</option><option>México</option><option>Kenia</option><option>Nueva Zelanda</option></select><button class="boton boton-modal" data-accion="comparar">Comparar viajes</button><p id="resultado-comparador">Seleccioná dos destinos para comenzar.</p></div><div class="mapa"><h3>Destinos por continente</h3><p>Europa · Sudamérica · Asia · África · Oceanía</p><button class="boton boton-modal" data-accion="ver-mapa">Explorar por región</button></div></div></div></section>
+  </main>
+
+  <section class="buscador-panel" id="buscador" aria-hidden="true">
+    <div class="buscador-contenido">
+      <button class="cerrar-panel" type="button" data-accion="cerrar-buscador" aria-label="Cerrar buscador">×</button>
+      <p class="etiqueta">Encontrá tu destino</p><h2>¿A dónde querés viajar?</h2>
+      <form id="form-busqueda"><label for="destino">Destino</label><input id="destino" name="destino" type="search" placeholder="Escribí el destino que soñás conocer" required><label for="mes">Mes de salida</label><select id="mes" name="mes"><option value="">Elegí cuándo querés viajar</option><option>Enero a marzo</option><option>Abril a junio</option><option>Julio a septiembre</option><option>Octubre a diciembre</option></select><button class="boton boton-principal" type="submit">Buscar opciones</button></form>
+      <p id="resultado-busqueda" class="resultado" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-titulo"><div class="modal-contenido"><button class="cerrar-panel" type="button" data-accion="cerrar-modal" aria-label="Cerrar ventana">×</button><p class="etiqueta">Destino seleccionado</p><h2 id="modal-titulo"></h2><p id="modal-texto"></p><button class="boton boton-modal consultar" type="button">Quiero cotizar este viaje</button></div></div>
+
+  <aside class="carrito" id="carrito" aria-hidden="true" aria-label="Carrito de compras">
+    <div class="carrito-encabezado"><div><p class="etiqueta">Tu selección</p><h2>Carrito de viaje</h2></div><button class="cerrar-panel" type="button" data-accion="cerrar-carrito" aria-label="Cerrar carrito">×</button></div>
+    <div id="items-carrito" class="items-carrito"></div>
+    <div class="carrito-resumen"><p><span>Subtotal</span><strong id="subtotal-carrito">USD 0</strong></p><p><span>Impuestos estimados</span><strong id="impuestos-carrito">USD 0</strong></p><div><span>Total estimado</span><strong id="total-carrito">USD 0</strong></div><button type="button" class="boton boton-checkout" data-accion="checkout">Continuar reserva</button><button type="button" class="vaciar-carrito" data-accion="vaciar-carrito">Vaciar carrito</button></div>
+  </aside>
+
+  <section class="modal-auth" id="modal-auth" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="auth-titulo"><div class="auth-contenido"><button class="cerrar-panel" type="button" data-accion="cerrar-auth" aria-label="Cerrar">×</button><div class="pestanas-auth"><button type="button" class="pestana activa" data-auth="login">Iniciar sesión</button><button type="button" class="pestana" data-auth="registro">Registrarse</button></div><form id="form-login" class="form-auth"><h2 id="auth-titulo">Bienvenido de nuevo</h2><p>Ingresá para ver tus reservas y guardar favoritos.</p><label for="email-login">Correo electrónico</label><input id="email-login" type="email" required placeholder="nombre@email.com"><label for="clave-login">Contraseña</label><input id="clave-login" type="password" required minlength="4" placeholder="••••••••"><button class="boton boton-modal" type="submit">Ingresar a mi cuenta</button><button type="button" class="link-form" data-accion="recuperar-clave">Olvidé mi contraseña</button></form><form id="form-registro" class="form-auth oculto"><h2>Creá tu cuenta BITA</h2><p>Registrate gratis y empezá a planear tu viaje.</p><label for="nombre-registro">Nombre completo</label><input id="nombre-registro" type="text" required placeholder="Tu nombre"><label for="email-registro">Correo electrónico</label><input id="email-registro" type="email" required placeholder="nombre@email.com"><label for="clave-registro">Contraseña</label><input id="clave-registro" type="password" required minlength="4" placeholder="Mínimo 4 caracteres"><label class="checkbox"><input type="checkbox" required> Acepto los términos y condiciones.</label><button class="boton boton-modal" type="submit">Crear mi cuenta</button></form></div></section>
+  <section class="checkout modal-auth" id="checkout" aria-hidden="true"><div class="auth-contenido"><button class="cerrar-panel" type="button" data-accion="cerrar-checkout">×</button><h2>Finalizar reserva</h2><p class="texto-checkout">Completá los datos del pasajero. Esta es una confirmación simulada.</p><form id="form-checkout" class="form-auth"><label>Nombre y apellido<input required placeholder="Como figura en el documento"></label><label>Documento<input required pattern="[0-9]{7,10}" placeholder="DNI o pasaporte"></label><label>Fecha de nacimiento<input required type="date"></label><label>Fecha de salida<input required type="date"></label><label>Pasajeros<select required><option value="">Seleccionar</option><option>1 pasajero</option><option>2 pasajeros</option><option>3 pasajeros</option><option>4 o más pasajeros</option></select></label><label>Habitación<select required><option value="">Seleccionar</option><option>Doble</option><option>Triple</option><option>Individual</option></select></label><label>Medio de pago<select required><option value="">Seleccionar</option><option>Tarjeta de crédito</option><option>Transferencia bancaria</option><option>Mercado Pago</option></select></label><button class="boton boton-modal" type="submit">Confirmar solicitud</button></form></div></section>
+  <section class="modal-auth" id="confirmacion" aria-hidden="true"><div class="auth-contenido confirmacion"><div class="check-confirmacion">✓</div><p class="etiqueta">Solicitud enviada</p><h2>¡Tu viaje está en marcha!</h2><p id="texto-confirmacion"></p><button class="boton boton-modal" type="button" data-accion="cerrar-confirmacion">Entendido</button></div></section>
+  <aside class="panel-cuenta" id="panel-cuenta"><button class="cerrar-panel" type="button" data-accion="cerrar-cuenta">×</button><p class="etiqueta">Mi cuenta</p><h2 id="nombre-cuenta">Viajero BITA</h2><div class="tabs-cuenta"><button data-tab="reservas">Reservas</button><button data-tab="guardados">Guardados</button><button data-tab="perfil">Perfil</button></div><div id="contenido-cuenta"></div></aside>
+  <button class="chat-boton" data-accion="abrir-chat">◌ Chat</button><section class="chat" id="chat"><div class="chat-top">Asistencia BITA <button data-accion="cerrar-chat">×</button></div><div class="chat-mensajes" id="chat-mensajes"><p>Hola, ¿en qué podemos ayudarte?</p></div><form id="form-chat"><input required placeholder="Escribí tu consulta..."><button>Enviar</button></form></section>
+  <nav class="nav-movil" aria-label="Navegación rápida"><a href="#inicio">⌂<span>Inicio</span></a><button data-accion="mostrar-buscador">⌕<span>Buscar</span></button><button data-accion="abrir-carrito">▣<span>Carrito</span></button><button data-accion="abrir-login">◉<span>Cuenta</span></button></nav>
+
+  <div class="aviso" id="aviso" role="status" aria-live="polite"></div>
+
+  <footer id="contacto">
+    <div class="contenedor pie-superior"><a href="mailto:hola@bita.com">✉ <span>hola@bita.com</span></a><a href="tel:+541155555555">☎ <span>+54 11 5555 5555</span></a><a href="#inicio">⌂ <span>Buenos Aires, Argentina</span></a></div>
+    <div class="pie-inferior"><div class="contenedor"><p>© 2026 BITA Turismo. Todos los derechos reservados.</p><div><a href="#inicio">Términos</a><a href="#inicio">Privacidad</a></div></div></div>
+  </footer>
+</body>
+</html>

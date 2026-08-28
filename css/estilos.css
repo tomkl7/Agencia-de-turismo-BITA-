@@ -1,0 +1,148 @@
+:root { --violeta:#6343a6; --morado:#7d3fe9; --oscuro:#251a35; --blanco:#fff; --fondo:#f7f5fb; }
+* { box-sizing:border-box; }
+html { scroll-behavior:auto; }
+body { margin:0; color:var(--oscuro); background:var(--fondo); font-family:"Montserrat",Arial,sans-serif; }
+a { color:inherit; text-decoration:none; }
+.contenedor { width:90%; max-width:1120px; margin:0 auto; }
+.seccion{overflow:hidden}.boton{letter-spacing:.1px;box-shadow:0 5px 13px #3216571c}.boton-principal{box-shadow:0 8px 18px #2d146647}.boton:focus-visible,button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #e1caff;outline-offset:3px}.encabezado-contenido{padding:0 2px}.marca-texto{text-shadow:3px 3px 0 #42296f}.hero-texto{color:#f1e9ff}.hero .boton{padding:16px 32px}.titulo-seccion{margin-bottom:36px}.titulo-seccion h2{font-weight:800}.tarjetas-destinos{gap:28px}.tarjeta-destino{border-width:4px}.tarjeta-destino .info-destino{min-height:187px;display:flex;flex-direction:column}.tarjeta-destino .acciones-tarjeta{margin-top:auto}.chip{box-shadow:0 3px 8px #2d174540}.paquete-info{min-height:262px;display:flex;flex-direction:column}.paquete-pie{margin-top:auto}.boton-agregar{box-shadow:0 5px 12px #32165732}.beneficios{position:relative;overflow:hidden}.beneficios:before{position:absolute;right:-18px;top:-19px;content:'✦';font-size:72px;color:#d9c0ff}.beneficios h3,.beneficios p,.beneficios ul,.beneficios button{position:relative}.ficha-cabecera strong{padding:6px 10px;border-radius:16px;background:#ffffff1c}.detalle-ficha ul li::marker{color:#dfcaff}.nosotros{border-top:1px solid #eee7f8;border-bottom:1px solid #eee7f8}.numeros p{padding-left:12px;border-left:2px solid #b486ff}.resenas{position:relative}.lista-resenas article{border:1px solid #e9def9}.lista-resenas article:first-letter{font-size:20px}.preguntas{border:1px solid #e5dbf0;border-radius:12px;overflow:hidden;background:#fff;box-shadow:0 8px 22px #3216570d}.pregunta{padding:19px 21px}.pregunta+p{padding:0 21px 18px}.comparador,.mapa{border:1px solid #e7ddf5}.mapa{background:linear-gradient(145deg,#fff,#f0e6ff)}.mapa:before{display:block;margin-bottom:10px;content:'⌁  ✦  ◌  ◍';color:#8f56e1;letter-spacing:12px}.pie-superior{padding:33px 0}.pie-inferior{border-top:1px solid #ffffff24}.modal-contenido,.buscador-contenido,.auth-contenido{border:1px solid #ffffff}.carrito-encabezado h2{letter-spacing:-.5px}.cantidad button{font-weight:800}.aviso{border:1px solid #b889ff;background:#281844ef}.nav-movil{backdrop-filter:blur(8px)}
+.encabezado { background:linear-gradient(100deg,#4d337f,#6e42ad); color:var(--blanco); border-bottom:5px solid #a25cff; box-shadow:0 3px 14px #29144842; }
+.encabezado-contenido { min-height:122px; display:flex; align-items:center; justify-content:space-between; }
+.marca { width:100%; display:flex; align-items:center; justify-content:space-between; }
+.icono-cabecera { width:106px; min-height:77px; padding:7px 6px; border:1px solid #ffffff34; border-radius:13px; color:#fff; background:#251d35; font-family:inherit; cursor:pointer; box-shadow:inset 0 0 0 1px #00000026,0 5px 12px #1d102e45; }
+.icono-cabecera > span { display:block; font-size:47px; line-height:47px; }.icono-cabecera small { display:block; margin-top:5px; color:#e5d6ff; font-size:10px; font-weight:800; letter-spacing:.3px; }.avion > span { transform:rotate(-16deg); }.valija > span { color:#b78bff; }
+.marca-texto { display:flex; align-items:center; gap:20px; font-family:"Press Start 2P",monospace; font-size:46px; letter-spacing:2px; }
+.marca-texto i { width:34px; height:4px; display:block; background:#191426; }
+.menu-principal { display:none; }
+.boton-menu { display:none; border:0; background:transparent; color:#fff; font-size:25px; cursor:pointer; }
+.acciones-cuenta { position:absolute; right:5%; display:flex; gap:9px; align-items:center; }
+.boton-cuenta, .boton-carrito { border:1px solid #ffffff87; border-radius:20px; padding:8px 12px; background:#ffffff18; color:#fff; font-family:inherit; font-size:12px; font-weight:700; cursor:pointer; }
+.boton-carrito { font-size:16px; }
+.boton-carrito span { display:inline-block; min-width:18px; margin-left:3px; padding:1px 4px; border-radius:10px; background:#fff; color:#573591; font-size:11px; }
+.hero { padding:75px 0 70px; color:white; text-align:center; background:linear-gradient(110deg,#5b3a9c,#8240e9); }
+.hero-contenido { max-width:740px; }
+.etiqueta, .titulo-seccion p { margin:0 0 12px; font-weight:700; font-size:14px; letter-spacing:1.2px; text-transform:uppercase; }
+.hero h1 { max-width:650px; margin:0 auto 17px; font-size:48px; line-height:1.13; }
+.hero h1 span { color:#dec9ff; }
+.hero-texto { max-width:620px; margin:0 auto 28px; line-height:1.7; }
+.boton { display:inline-block; padding:14px 28px; border-radius:30px; font-weight:700; }
+.boton-principal { background:#fff; color:#6836be; }
+.seccion { padding:70px 0; }
+.titulo-seccion { margin-bottom:30px; text-align:center; }
+.titulo-seccion p { color:var(--morado); }
+.titulo-seccion h2 { margin:0; font-size:32px; }
+.barra-herramientas { display:flex; justify-content:center; align-items:center; flex-wrap:wrap; gap:10px; margin:-5px 0 30px; }
+.filtro, .boton-favoritos { border:1px solid #d8caef; border-radius:22px; padding:9px 16px; background:#fff; color:#5d35a4; font-family:inherit; font-weight:700; cursor:pointer; }
+.filtro.activo { background:#6f3ec7; color:#fff; border-color:#6f3ec7; }
+.boton-favoritos { margin-left:8px; background:#f1e9ff; }
+.boton-favoritos span { display:inline-block; min-width:19px; padding:1px 5px; border-radius:12px; background:#6f3ec7; color:#fff; }
+.tarjetas-destinos { display:flex; flex-wrap:wrap; gap:24px; justify-content:center; }
+.tarjeta-destino { width:calc(33.333% - 16px); overflow:hidden; border:5px solid var(--morado); border-radius:10px; background:var(--morado); color:#fff; box-shadow:0 8px 18px #27154a26; }
+.imagen-destino { height:195px; padding:12px; display:flex; justify-content:flex-end; align-items:flex-start; background-size:cover; background-position:center; }
+.polonia .imagen-destino, .ficha-polonia .foto-ficha { background-image:linear-gradient(#ffffff18,#00000012),url('https://images.unsplash.com/photo-1580655653885-65763b2597d0?auto=format&fit=crop&w=900&q=85'); }
+.bolivia .imagen-destino, .ficha-bolivia .foto-ficha { background-image:linear-gradient(#ffffff12,#00000012),url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=85'); }
+.suiza .imagen-destino { background-image:linear-gradient(#00000012,#00000035),url('https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=900&q=85'); }
+.japon .imagen-destino { background-image:url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=900&q=85'); }.brasil .imagen-destino { background-image:url('https://images.unsplash.com/photo-1483729558449-99ef09a8c325?auto=format&fit=crop&w=900&q=85'); }.italia .imagen-destino { background-image:url('https://images.unsplash.com/photo-1520175480921-4edfa2983e0f?auto=format&fit=crop&w=900&q=85'); }.mexico .imagen-destino { background-image:url('https://images.unsplash.com/photo-1512813195386-6cf811ad3542?auto=format&fit=crop&w=900&q=85'); }.egipto .imagen-destino { background-image:url('https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=900&q=85'); }.australia .imagen-destino { background-image:url('https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?auto=format&fit=crop&w=900&q=85'); }
+.tailandia .imagen-destino{background-image:url('https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=900&q=85')}.corea .imagen-destino{background-image:url('https://images.unsplash.com/photo-1538485399081-7c8979d311cc?auto=format&fit=crop&w=900&q=85')}.marruecos .imagen-destino{background-image:url('https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=900&q=85')}.kenia .imagen-destino{background-image:url('https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=900&q=85')}.nueva-zelanda .imagen-destino{background-image:url('https://images.unsplash.com/photo-1469521669194-babb45599def?auto=format&fit=crop&w=900&q=85')}
+.chip { padding:5px 9px; border-radius:13px; background:#ffffffdf; color:#5d30a6; font-size:11px; font-weight:800; }
+.info-destino { padding:17px 16px 18px; }
+.info-destino h3 { margin:0 0 8px; font-size:20px; }
+.info-destino p { min-height:38px; margin:0 0 16px; font-size:13px; line-height:1.45; }
+.info-destino span { font-size:14px; font-weight:700; }
+.info-destino > span { display:inline-block; padding:5px 9px; border-radius:14px; background:#ffffff18; }
+.acciones-tarjeta { display:flex; justify-content:space-between; align-items:center; margin-top:16px; }
+.detalle { border:0; padding:0; color:#fff; background:transparent; font-family:inherit; font-weight:800; cursor:pointer; }
+.corazon { width:31px; height:31px; border:1px solid #ffffffa8; border-radius:50%; color:#fff; background:#ffffff18; font-size:21px; line-height:20px; cursor:pointer; }
+.corazon.seleccionado { color:#ffcee3; }
+.tarjeta-destino.oculta { display:none; }
+.enlace-viajes { display:block; width:max-content; margin:32px auto 0; color:#6630bf; font-weight:800; }
+.enlace-viajes span { margin-left:8px; font-size:22px; }
+.viajes { background:var(--violeta); }
+.titulo-claro p, .titulo-claro h2 { color:white; }
+.ficha-viaje { display:flex; max-width:950px; min-height:280px; margin:0 auto 16px; background:#7b3fe5; color:#fff; }
+.foto-ficha { width:34%; background-position:center; background-size:cover; }
+.detalle-ficha { width:66%; padding:27px 32px; }
+.ficha-cabecera { display:flex; justify-content:space-between; gap:15px; align-items:baseline; border-bottom:1px solid #ffffff75; }
+.ficha-cabecera h3 { margin:0 0 11px; font-size:24px; }
+.ficha-cabecera strong { white-space:nowrap; font-size:19px; }
+.detalle-ficha p { margin:16px 0 12px; font-size:14px; line-height:1.55; }
+.detalle-ficha ul { display:flex; flex-wrap:wrap; margin:0 0 20px; padding-left:18px; font-size:12px; gap:8px 25px; }
+.boton-claro { padding:10px 20px; background:#fff; color:#6733bb; font-size:13px; }
+.consultar { border:0; cursor:pointer; font-family:inherit; }
+.paquetes { background:#fff; }
+.paquetes-contenido { display:flex; align-items:stretch; gap:22px; }
+.paquete { width:31%; min-width:0; overflow:hidden; border-radius:12px; background:#7540d4; color:#fff; box-shadow:0 8px 22px #27154a24; }
+.paquete-foto { height:175px; padding:12px; display:flex; justify-content:flex-end; align-items:flex-start; background-size:cover; background-position:center; }
+.paquete-poland .paquete-foto { background-image:linear-gradient(135deg,#3e1a80aa,#9655df55),url('https://images.unsplash.com/photo-1526129318478-62ed807ebdf9?auto=format&fit=crop&w=800&q=85'); }
+.paquete-spain .paquete-foto { background-image:linear-gradient(#00000010,#00000040),url('https://images.unsplash.com/photo-1543783207-ec64e4d95325?auto=format&fit=crop&w=800&q=85'); }
+.paquete-info { padding:20px; }
+.paquete-destino { margin:0 0 7px; color:#e3cfff; font-size:10px; font-weight:800; letter-spacing:1px; }
+.paquete h3 { margin:0 0 8px; font-size:21px; }
+.paquete-info > p:not(.paquete-destino) { min-height:38px; margin:0; font-size:12px; line-height:1.5; }
+.paquete-pie { display:flex; align-items:end; gap:7px; margin:17px 0; }
+.paquete-pie strong { font-size:20px; }
+.paquete-pie span { padding-bottom:3px; font-size:10px; }
+.boton-agregar { width:100%; padding:11px; border:0; border-radius:22px; color:#6033ac; background:#fff; font-family:inherit; font-size:12px; font-weight:800; cursor:pointer; }
+.beneficios { width:31%; padding:25px; border:1px solid #e2d8f3; border-radius:12px; background:#f8f5ff; }
+.beneficios h3 { margin:0 0 10px; font-size:20px; }
+.beneficios p { margin:0; font-size:12px; line-height:1.55; }
+.beneficios ul { margin:20px 0; padding:0; list-style:none; font-size:12px; font-weight:600; line-height:2; }
+.enlace-asistencia { padding:0; border:0; color:#6738bd; background:transparent; font-family:inherit; font-size:12px; font-weight:800; text-decoration:underline; cursor:pointer; }
+.nosotros { background:#fff; }
+.nosotros-contenido { display:flex; align-items:center; justify-content:space-between; gap:55px; }
+.nosotros h2 { max-width:560px; margin:0; font-size:28px; line-height:1.3; }
+.numeros { display:flex; gap:25px; }
+.numeros p { width:105px; margin:0; font-size:11px; line-height:1.5; }
+.numeros b { display:block; color:var(--morado); font-size:23px; }
+footer { background:#5c3ba1; color:#fff; }
+.pie-superior { display:flex; justify-content:space-between; padding:28px 0; }
+.pie-superior a { font-size:20px; font-weight:700; }
+.pie-superior span { margin-left:7px; font-size:15px; }
+.pie-inferior { background:#301c57; font-size:11px; }
+.pie-inferior .contenedor { min-height:52px; display:flex; justify-content:space-between; align-items:center; }
+.pie-inferior p { margin:0; }
+.pie-inferior a { margin-left:20px; }
+.buscador-panel, .modal { position:fixed; inset:0; z-index:10; display:none; align-items:center; justify-content:center; padding:24px; background:#211333cc; }
+.buscador-panel.abierto, .modal.abierto { display:flex; }
+.buscador-contenido, .modal-contenido { position:relative; width:100%; max-width:520px; padding:42px; border-radius:16px; background:#fff; box-shadow:0 20px 50px #120c1f66; }
+.buscador-contenido h2, .modal-contenido h2 { margin:0 0 25px; font-size:29px; }
+.buscador-contenido .etiqueta, .modal-contenido .etiqueta { color:#7740d6; }
+.cerrar-panel { position:absolute; top:12px; right:16px; border:0; background:transparent; color:#563182; font-size:31px; cursor:pointer; }
+#form-busqueda { display:flex; flex-direction:column; gap:9px; }
+#form-busqueda label { margin-top:4px; font-size:13px; font-weight:800; }
+#form-busqueda input, #form-busqueda select { width:100%; padding:13px; border:1px solid #cfc2e3; border-radius:7px; color:#322348; font:inherit; }
+#form-busqueda .boton { margin-top:12px; border:0; background:#6d38ce; color:#fff; cursor:pointer; font:inherit; }
+.resultado { margin:19px 0 0; color:#6534bd; font-size:13px; font-weight:600; line-height:1.5; }
+.modal-contenido p:not(.etiqueta) { margin:0 0 25px; line-height:1.65; }
+.boton-modal { border:0; background:#6d38ce; color:#fff; cursor:pointer; font:inherit; }
+.aviso { position:fixed; right:20px; bottom:20px; z-index:20; max-width:330px; padding:15px 18px; border-radius:8px; background:#281844; color:#fff; box-shadow:0 8px 20px #0004; display:none; font-size:13px; line-height:1.45; }
+.aviso.visible { display:block; }
+.carrito { position:fixed; z-index:30; top:0; right:0; display:none; width:430px; max-width:100%; min-height:100vh; padding:28px; background:#fff; box-shadow:-10px 0 30px #160b2680; }
+.carrito.abierto { display:flex; flex-direction:column; }
+.carrito-encabezado { position:relative; padding-bottom:18px; border-bottom:1px solid #e8e0f2; }
+.carrito-encabezado .etiqueta { color:#7341ca; }
+.carrito h2 { margin:0; font-size:26px; }
+.items-carrito { flex:1; overflow:auto; padding:15px 0; }
+.item-carrito { display:flex; justify-content:space-between; gap:10px; padding:16px 0; border-bottom:1px solid #eee8f5; }
+.item-carrito h3 { margin:0 0 6px; font-size:15px; }
+.item-carrito p { margin:0 0 12px; color:#725b92; font-size:11px; }
+.cantidad { display:flex; align-items:center; gap:11px; }
+.cantidad button { width:25px; height:25px; border:1px solid #d6c9e6; border-radius:50%; color:#5f35a6; background:#fff; font-size:17px; cursor:pointer; }
+.cantidad span { min-width:12px; text-align:center; font-size:13px; font-weight:800; }
+.eliminar-item { width:27px; height:27px; border:0; border-radius:50%; color:#a11919; background:#ffe7e7; font-size:19px; cursor:pointer; }
+.carrito-vacio { padding:70px 20px; color:#725b92; text-align:center; }
+.carrito-vacio span { font-size:45px; }.carrito-vacio h3 { color:#322348; }.carrito-vacio p { font-size:12px; line-height:1.5; }
+.carrito-resumen { border-top:1px solid #ded3ed; padding-top:18px; }
+.carrito-resumen p, .carrito-resumen > div { display:flex; justify-content:space-between; margin:0 0 11px; font-size:13px; }.carrito-resumen > div { margin-top:16px; font-size:17px; }.carrito-resumen strong { color:#5e31ac; }
+.boton-checkout { width:100%; margin-top:12px; border:0; color:#fff; background:#6f3bc9; font-family:inherit; cursor:pointer; }.vaciar-carrito { display:block; width:100%; margin-top:11px; border:0; color:#a03535; background:transparent; font-family:inherit; font-size:12px; cursor:pointer; }
+.modal-auth { position:fixed; z-index:40; inset:0; display:none; align-items:center; justify-content:center; padding:20px; background:#211333cc; }.modal-auth.abierto { display:flex; }
+.auth-contenido { position:relative; width:100%; max-width:460px; padding:30px; border-radius:15px; background:#fff; }.pestanas-auth { display:flex; margin:-30px -30px 26px; border-bottom:1px solid #e7ddf1; }.pestana { width:50%; padding:17px; border:0; color:#725b92; background:#fff; font-family:inherit; font-weight:800; cursor:pointer; }.pestana.activa { color:#6335b5; border-bottom:3px solid #6335b5; }
+.form-auth { display:flex; flex-direction:column; gap:8px; }.form-auth h2 { margin:0; font-size:24px; }.form-auth p { margin:0 0 10px; color:#725b92; font-size:12px; line-height:1.5; }.form-auth label { margin-top:4px; font-size:12px; font-weight:800; }.form-auth input,.form-auth select { padding:12px; border:1px solid #d5c8e5; border-radius:7px; background:#fff; font:inherit; }.form-auth .boton { margin-top:12px; }.form-auth.oculto { display:none; }.checkbox { display:flex; align-items:center; gap:7px; color:#684f89; font-weight:500 !important; }.checkbox input { width:auto; }.link-form { margin:7px auto 0; border:0; color:#6535b4; background:transparent; font-family:inherit; font-size:12px; text-decoration:underline; cursor:pointer; }
+.control-header{border:0;color:#fff;background:transparent;font-weight:800;cursor:pointer}.filtros-avanzados,.oferta-contenido,.lista-resenas{display:flex;gap:15px}.filtros-avanzados{justify-content:center;flex-wrap:wrap;margin:-8px 0 25px}.filtros-avanzados label{font-size:11px;font-weight:700}.filtros-avanzados select{display:block;margin-top:4px;padding:7px;border:1px solid #d9cdea;border-radius:5px;background:#fff;font:inherit;font-size:11px}.ofertas{padding:40px 0;color:#fff;background:#2e1b54}.oferta-contenido{align-items:center;justify-content:space-between}.oferta-contenido h2{margin:0;font-size:26px}.reloj{color:#e7d4ff;font-size:30px;font-weight:800;text-align:center}.reloj small{display:block;font-size:8px}.lista-resenas article{width:33%;padding:22px;border-radius:10px;background:#fff;color:#6d38c9;box-shadow:0 5px 14px #31204812}.lista-resenas p{color:#382651;font-size:13px;line-height:1.5}.lista-resenas strong{font-size:11px}.preguntas{max-width:760px;margin:auto}.pregunta{width:100%;display:flex;justify-content:space-between;padding:17px 0;border:0;border-bottom:1px solid #ded3eb;background:#fff;font:inherit;font-weight:800;text-align:left;cursor:pointer}.pregunta span{font-size:22px;color:#6f3bc9}.pregunta+p{display:none;margin:0;padding:0 0 17px;color:#695881;font-size:13px}.pregunta+p.visible{display:block}.panel-cuenta,.chat{position:fixed;z-index:35;display:none;background:#fff;box-shadow:0 8px 30px #21133475}.panel-cuenta{top:0;right:0;width:380px;max-width:100%;min-height:100vh;padding:34px}.panel-cuenta.abierto,.chat.abierto{display:block}.tabs-cuenta{display:flex;gap:8px;margin:20px 0}.tabs-cuenta button{padding:8px;border:1px solid #d9cdea;background:#fff;color:#6436b1;font:inherit;font-size:11px;cursor:pointer}.chat-boton{position:fixed;z-index:20;right:21px;bottom:78px;padding:13px;border:0;border-radius:24px;background:#6a38c6;color:#fff;font:inherit;font-weight:800;cursor:pointer}.chat{right:20px;bottom:20px;width:320px;max-width:calc(100% - 40px)}.chat-top{display:flex;justify-content:space-between;padding:14px;background:#5f35af;color:#fff;font-weight:800}.chat-top button,#form-chat button{border:0;background:transparent;color:#fff;cursor:pointer}.chat-mensajes{height:180px;padding:14px;overflow:auto;background:#f8f6fc}.chat-mensajes p{max-width:85%;padding:9px;border-radius:8px;background:#eee7fa;font-size:11px}.chat-mensajes .mensaje-propio{margin-left:auto;color:#fff;background:#7040ca}#form-chat{display:flex;padding:10px;gap:7px}#form-chat input{flex:1;min-width:0;padding:8px;border:1px solid #dacdea}#form-chat button{padding:8px;background:#6f3bc9}.modo-oscuro{background:#17121f;color:#eee9f8}.modo-oscuro .destacados,.modo-oscuro .nosotros,.modo-oscuro .paquetes,.modo-oscuro .faq,.modo-oscuro .pregunta{background:#20182b}.modo-oscuro .titulo-seccion h2{color:#fff}
+@media (max-width:760px) { .encabezado-contenido { min-height:91px; position:relative; } .avion { font-size:42px; } .valija { width:66px; height:54px; font-size:37px; line-height:38px; } .marca-texto { gap:9px; font-size:26px; } .marca-texto i { width:13px; height:3px; } .acciones-cuenta { right:45px; }.boton-cuenta { display:none; }.boton-menu { display:block; position:absolute; right:0; top:32px; } .menu-principal { position:absolute; z-index:5; top:91px; right:0; width:170px; padding:10px; background:#41276f; } .menu-principal.abierto { display:flex; flex-direction:column; } .menu-principal a { padding:11px; color:#fff; font-size:13px; font-weight:700; } .hero { padding:54px 0; } .hero h1 { font-size:35px; } .seccion { padding:52px 0; } .tarjetas-destinos, .paquetes-contenido { flex-direction:column; align-items:center; } .tarjeta-destino, .paquete, .beneficios { width:100%; max-width:390px; } .imagen-destino { height:210px; } .ficha-viaje { flex-direction:column; } .foto-ficha, .detalle-ficha { width:100%; } .foto-ficha { height:205px; } .detalle-ficha { padding:23px; } .ficha-cabecera { display:block; } .ficha-cabecera strong { display:block; margin-bottom:10px; } .nosotros-contenido, .numeros { flex-direction:column; gap:25px; } .numeros { gap:14px; } .numeros p { width:auto; } .pie-superior { flex-direction:column; gap:16px; } .pie-inferior .contenedor { padding:14px 0; flex-direction:column; align-items:flex-start; gap:10px; } .pie-inferior a { margin:0 18px 0 0; } .buscador-contenido, .modal-contenido, .auth-contenido { padding:35px 24px 26px; } .pestanas-auth { margin:-35px -24px 24px; } }
+.boton-cuenta{border:1px solid #ffffff8c;border-radius:22px;padding:10px 15px;background:#ffffff12;color:#fff;font-family:inherit;font-size:12px;font-weight:800;cursor:pointer}.usuario-icono{color:#d6bbff}.selector-moneda{display:flex;flex-direction:column;align-items:flex-start;padding:5px 9px;border:1px solid #ffffff57;border-radius:8px;color:#fff;background:#432b70;font-family:inherit;cursor:pointer}.selector-moneda span{font-size:8px;color:#d5c2f8}.selector-moneda b{font-size:12px}.valija{padding-top:12px}.valija .asa-valija{width:34px;height:13px;margin:0 auto -2px;border:5px solid #9c68ed;border-bottom:0;border-radius:7px 7px 0 0}.valija .cuerpo-valija{width:76px;height:45px;margin:auto;overflow:hidden;border-radius:5px;background:#111018;color:#a06aef;font-size:41px;line-height:46px}.valija small{margin-top:3px}.valija small b{padding:1px 4px;border-radius:9px;color:#251a35;background:#fff}
+.explorar{background:#f7f2ff}.herramientas-viaje{display:flex;gap:22px;max-width:850px;margin:auto}.comparador,.mapa{width:50%;padding:25px;border-radius:14px;background:#fff;box-shadow:0 8px 22px #34204d16}.comparador h3,.mapa h3{margin-top:0}.comparador select{width:100%;margin:0 0 10px;padding:11px;border:1px solid #dbcdf0;border-radius:7px;background:#fff;font:inherit}.comparador .boton,.mapa .boton{margin-top:8px;border:0}.comparador p,.mapa p{min-height:35px;color:#705c8b;font-size:12px;line-height:1.5}.newsletter{padding:30px 0;background:#43246f}.newsletter .contenedor{display:flex;align-items:center;justify-content:space-between;gap:25px}.newsletter h2{margin:0;font-size:23px}.newsletter .etiqueta{margin-bottom:6px}.newsletter form{display:flex;gap:8px}.newsletter input{min-width:245px;padding:12px;border:0;border-radius:7px;font:inherit}.newsletter button{padding:12px 16px;border:0;border-radius:7px;color:#5a319b;background:#fff;font:inherit;font-weight:800;cursor:pointer}@media(max-width:760px){.herramientas-viaje,.newsletter .contenedor{flex-direction:column}.comparador,.mapa{width:100%}.newsletter form{width:100%;flex-direction:column}.newsletter input{min-width:0;width:100%}}
+.nav-movil{display:none}@media(max-width:760px){body{padding-bottom:65px}.nav-movil{position:fixed;z-index:25;right:0;bottom:0;left:0;display:flex;justify-content:space-around;padding:8px 4px;background:#301c57;color:#fff;box-shadow:0 -4px 15px #190d2f45}.nav-movil a,.nav-movil button{display:flex;flex-direction:column;align-items:center;gap:2px;border:0;color:#fff;background:transparent;font:inherit;font-size:18px}.nav-movil span{font-size:9px}.acciones-cuenta{right:14px;bottom:142px}.chat-boton{right:14px;bottom:78px}}
+.confirmacion{text-align:center}.check-confirmacion{width:64px;height:64px;margin:0 auto 18px;border-radius:50%;background:#e8d8ff;color:#6d35c5;font-size:38px;font-weight:800;line-height:64px}.confirmacion h2{margin:8px 0 12px}.confirmacion p:not(.etiqueta){color:#695783;font-size:13px;line-height:1.6}.comparador #resultado-comparador{padding:10px 12px;border-radius:7px;background:#f6f0ff;color:#543785}.form-auth input[type="date"]{color:#5c4280}.form-auth select:invalid{color:#826e9f}@media(max-width:760px){.checkout .auth-contenido{max-height:88vh;overflow:auto}.carrito{width:100%;padding:20px}.filtros-avanzados label{width:47%}.filtros-avanzados select{width:100%}}
+.destacados .tarjetas-destinos{align-items:stretch}.destacados .tarjeta-destino{background:linear-gradient(145deg,#7942db,#6230bb)}.destacados .tarjeta-destino h3{font-size:19px}.destacados .imagen-destino{height:185px}.barra-herramientas{padding:11px;border:1px solid #e7ddf3;border-radius:15px;background:#fff;box-shadow:0 5px 14px #3d1d6410}
+.acciones-cuenta{position:fixed;z-index:28;right:20px;bottom:78px;display:flex;flex-direction:column;align-items:stretch;gap:8px;padding:9px;border:1px solid #cbb3f1;background:#3a2362e8;border-radius:18px;box-shadow:0 10px 28px #24133e75}.acciones-cuenta .selector-moneda,.acciones-cuenta .boton-cuenta,.acciones-cuenta .control-header{min-width:112px;border:1px solid #ffffff38;border-radius:12px;background:#ffffff12;color:#fff;box-shadow:none}.acciones-cuenta .selector-moneda{flex-direction:row;justify-content:space-between;align-items:center;padding:9px 11px}.acciones-cuenta .selector-moneda span{font-size:11px}.acciones-cuenta .selector-moneda b{padding:3px 7px;border-radius:6px;background:#fff;color:#5b329f}.acciones-cuenta .control-header{height:36px;font-size:17px;cursor:pointer}.acciones-cuenta .boton-cuenta{padding:10px 11px;text-align:left}.chat-boton{right:20px;bottom:20px;width:130px;border:1px solid #cbb3f1;background:#5c35a7;box-shadow:0 10px 28px #24133e75}.chat-boton:before{content:'✦';margin-right:7px;color:#f0d8ff}.carrito{border-left:6px solid #8d50e7}.carrito-encabezado{padding:9px 4px 20px}.items-carrito{padding:18px 4px}.item-carrito{padding:17px 12px;border:1px solid #e7ddf2;border-radius:10px;background:#fbf9ff;box-shadow:0 3px 10px #311d500d}.item-carrito+.item-carrito{margin-top:12px}.carrito-resumen{padding:20px 6px 5px;background:linear-gradient(#fff,#f4edff)}.boton-checkout{background:linear-gradient(100deg,#6334b4,#8647df);box-shadow:0 5px 12px #5d32ad3d}.hero{background:linear-gradient(120deg,#4d307f,#7e3ee4 55%,#6233b0)}.destacados{background:linear-gradient(180deg,#fff,#f8f4ff)}.paquetes{background:#fbf9ff}.seccion{position:relative}.titulo-seccion h2{letter-spacing:-.6px}.ficha-viaje{border-radius:12px;overflow:hidden;box-shadow:0 12px 28px #20113d3d}.ofertas{background:linear-gradient(100deg,#28184d,#6632bb,#2c1a52)}
+.hero-contenido{position:relative;padding:18px 0}.hero-contenido:before,.hero-contenido:after{position:absolute;content:'✦';color:#e6d4ff75;font-size:25px}.hero-contenido:before{top:4px;left:3%}.hero-contenido:after{right:5%;bottom:10px}.titulo-seccion p{display:inline-block;padding:6px 11px;border-radius:18px;background:#eee4ff;color:#6c39bf}.titulo-claro p{background:#ffffff1c;color:#f1e8ff}.tarjeta-destino{box-shadow:0 10px 24px #42226b24}.imagen-destino{position:relative}.imagen-destino:after{position:absolute;right:0;bottom:0;left:0;height:35%;content:'';background:linear-gradient(transparent,#170d2d4f)}.chip{position:relative;z-index:1}.filtro,.boton-favoritos{box-shadow:0 3px 8px #351b5b12}.filtro.activo{box-shadow:0 5px 12px #5521ac45}.paquete{border:1px solid #d9c8f4}.beneficios{box-shadow:0 8px 20px #311d5014}.pie-superior a{padding:8px 12px;border-radius:8px}.pie-superior a:hover{background:#ffffff12}.form-auth input:focus,#form-busqueda input:focus,#form-busqueda select:focus{outline:3px solid #c9a8ff70;border-color:#7540d0}
