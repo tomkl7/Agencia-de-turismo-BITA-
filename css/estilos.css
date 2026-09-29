@@ -39,7 +39,7 @@ a { color:inherit; text-decoration:none; }
 .tarjeta-destino { width:calc(33.333% - 16px); overflow:hidden; border:5px solid var(--morado); border-radius:10px; background:var(--morado); color:#fff; box-shadow:0 8px 18px #27154a26; }
 .imagen-destino { height:195px; padding:12px; display:flex; justify-content:flex-end; align-items:flex-start; background-size:cover; background-position:center; }
 .polonia .imagen-destino, .ficha-polonia .foto-ficha { background-image:linear-gradient(#ffffff18,#00000012),url('https://images.unsplash.com/photo-1580655653885-65763b2597d0?auto=format&fit=crop&w=900&q=85'); }
-.bolivia .imagen-destino, .ficha-bolivia .foto-ficha { background-image:linear-gradient(#ffffff12,#00000012),url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=85'); }
+.bolivia .imagen-destino, .ficha-bolivia .foto-ficha { background-image:linear-gradient(#ffffff12,#0000002b),url('https://images.unsplash.com/photo-1641755222059-8086a4f8c850?auto=format&fit=crop&w=1200&q=85'); }
 .suiza .imagen-destino { background-image:linear-gradient(#00000012,#00000035),url('https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=900&q=85'); }
 .japon .imagen-destino { background-image:url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=900&q=85'); }.brasil .imagen-destino { background-image:url('https://images.unsplash.com/photo-1483729558449-99ef09a8c325?auto=format&fit=crop&w=900&q=85'); }.italia .imagen-destino { background-image:url('https://images.unsplash.com/photo-1520175480921-4edfa2983e0f?auto=format&fit=crop&w=900&q=85'); }.mexico .imagen-destino { background-image:url('https://images.unsplash.com/photo-1512813195386-6cf811ad3542?auto=format&fit=crop&w=900&q=85'); }.egipto .imagen-destino { background-image:url('https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=900&q=85'); }.australia .imagen-destino { background-image:url('https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?auto=format&fit=crop&w=900&q=85'); }
 .tailandia .imagen-destino{background-image:url('https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=900&q=85')}.corea .imagen-destino{background-image:url('https://images.unsplash.com/photo-1538485399081-7c8979d311cc?auto=format&fit=crop&w=900&q=85')}.marruecos .imagen-destino{background-image:url('https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=900&q=85')}.kenia .imagen-destino{background-image:url('https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=900&q=85')}.nueva-zelanda .imagen-destino{background-image:url('https://images.unsplash.com/photo-1469521669194-babb45599def?auto=format&fit=crop&w=900&q=85')}
@@ -144,5 +144,95 @@ footer { background:#5c3ba1; color:#fff; }
 .nav-movil{display:none}@media(max-width:760px){body{padding-bottom:65px}.nav-movil{position:fixed;z-index:25;right:0;bottom:0;left:0;display:flex;justify-content:space-around;padding:8px 4px;background:#301c57;color:#fff;box-shadow:0 -4px 15px #190d2f45}.nav-movil a,.nav-movil button{display:flex;flex-direction:column;align-items:center;gap:2px;border:0;color:#fff;background:transparent;font:inherit;font-size:18px}.nav-movil span{font-size:9px}.acciones-cuenta{right:14px;bottom:142px}.chat-boton{right:14px;bottom:78px}}
 .confirmacion{text-align:center}.check-confirmacion{width:64px;height:64px;margin:0 auto 18px;border-radius:50%;background:#e8d8ff;color:#6d35c5;font-size:38px;font-weight:800;line-height:64px}.confirmacion h2{margin:8px 0 12px}.confirmacion p:not(.etiqueta){color:#695783;font-size:13px;line-height:1.6}.comparador #resultado-comparador{padding:10px 12px;border-radius:7px;background:#f6f0ff;color:#543785}.form-auth input[type="date"]{color:#5c4280}.form-auth select:invalid{color:#826e9f}@media(max-width:760px){.checkout .auth-contenido{max-height:88vh;overflow:auto}.carrito{width:100%;padding:20px}.filtros-avanzados label{width:47%}.filtros-avanzados select{width:100%}}
 .destacados .tarjetas-destinos{align-items:stretch}.destacados .tarjeta-destino{background:linear-gradient(145deg,#7942db,#6230bb)}.destacados .tarjeta-destino h3{font-size:19px}.destacados .imagen-destino{height:185px}.barra-herramientas{padding:11px;border:1px solid #e7ddf3;border-radius:15px;background:#fff;box-shadow:0 5px 14px #3d1d6410}
-.acciones-cuenta{position:fixed;z-index:28;right:20px;bottom:78px;display:flex;flex-direction:column;align-items:stretch;gap:8px;padding:9px;border:1px solid #cbb3f1;background:#3a2362e8;border-radius:18px;box-shadow:0 10px 28px #24133e75}.acciones-cuenta .selector-moneda,.acciones-cuenta .boton-cuenta,.acciones-cuenta .control-header{min-width:112px;border:1px solid #ffffff38;border-radius:12px;background:#ffffff12;color:#fff;box-shadow:none}.acciones-cuenta .selector-moneda{flex-direction:row;justify-content:space-between;align-items:center;padding:9px 11px}.acciones-cuenta .selector-moneda span{font-size:11px}.acciones-cuenta .selector-moneda b{padding:3px 7px;border-radius:6px;background:#fff;color:#5b329f}.acciones-cuenta .control-header{height:36px;font-size:17px;cursor:pointer}.acciones-cuenta .boton-cuenta{padding:10px 11px;text-align:left}.chat-boton{right:20px;bottom:20px;width:130px;border:1px solid #cbb3f1;background:#5c35a7;box-shadow:0 10px 28px #24133e75}.chat-boton:before{content:'✦';margin-right:7px;color:#f0d8ff}.carrito{border-left:6px solid #8d50e7}.carrito-encabezado{padding:9px 4px 20px}.items-carrito{padding:18px 4px}.item-carrito{padding:17px 12px;border:1px solid #e7ddf2;border-radius:10px;background:#fbf9ff;box-shadow:0 3px 10px #311d500d}.item-carrito+.item-carrito{margin-top:12px}.carrito-resumen{padding:20px 6px 5px;background:linear-gradient(#fff,#f4edff)}.boton-checkout{background:linear-gradient(100deg,#6334b4,#8647df);box-shadow:0 5px 12px #5d32ad3d}.hero{background:linear-gradient(120deg,#4d307f,#7e3ee4 55%,#6233b0)}.destacados{background:linear-gradient(180deg,#fff,#f8f4ff)}.paquetes{background:#fbf9ff}.seccion{position:relative}.titulo-seccion h2{letter-spacing:-.6px}.ficha-viaje{border-radius:12px;overflow:hidden;box-shadow:0 12px 28px #20113d3d}.ofertas{background:linear-gradient(100deg,#28184d,#6632bb,#2c1a52)}
+.acciones-cuenta{position:fixed;z-index:28;right:20px;bottom:78px;display:flex;flex-direction:column;align-items:stretch;gap:8px;padding:9px;border:1px solid #cbb3f1;background:#3a2362e8;border-radius:18px;box-shadow:0 10px 28px #24133e75}.acciones-cuenta .selector-moneda,.acciones-cuenta .boton-cuenta,.acciones-cuenta .control-header{min-width:112px;border:1px solid #ffffff38;border-radius:12px;background:#ffffff12;color:#fff;box-shadow:none}.acciones-cuenta .selector-moneda{flex-direction:row;justify-content:space-between;align-items:center;padding:9px 11px}.acciones-cuenta .selector-moneda span{font-size:11px}.acciones-cuenta .selector-moneda b{padding:3px 7px;border-radius:6px;background:#fff;color:#5b329f}.acciones-cuenta .control-header{height:36px;font-size:17px;cursor:pointer}.acciones-cuenta .boton-cuenta{padding:10px 11px;text-align:left}.chat-boton{right:20px;bottom:20px;width:130px;border:1px solid #cbb3f1;background:#5c35a7;box-shadow:0 10px 28px #24133e75}.chat-boton:before{content:'✦';margin-right:7px;color:#f0d8ff}.carrito{border-left:6px solid #8d50e7}.carrito-encabezado{padding:9px 4px 20px}.items-carrito{padding:18px 4px}.item-carrito{padding:17px 12px;border:1px solid #e7ddf2;border-radius:10px;background:#fbf9ff;box-shadow:0 3px 10px #311d500d}.item-carrito+.item-carrito{margin-top:12px}.carrito-resumen{padding:20px 6px 5px;background:linear-gradient(#fff,#f4edff)}.boton-checkout{background:linear-gradient(100deg,#6334b4,#8647df);box-shadow:0 5px 12px #5d32ad3d}.hero{background-image:linear-gradient(105deg,#321b5de8,#6132acdc 53%,#3d206cc9),url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1800&q=88');background-position:center;background-size:cover}.destacados{background:linear-gradient(180deg,#fff,#f8f4ff)}.paquetes{background:#fbf9ff}.seccion{position:relative}.titulo-seccion h2{letter-spacing:-.6px}.ficha-viaje{border-radius:12px;overflow:hidden;box-shadow:0 12px 28px #20113d3d}.ofertas{background:linear-gradient(100deg,#28184d,#6632bb,#2c1a52)}
 .hero-contenido{position:relative;padding:18px 0}.hero-contenido:before,.hero-contenido:after{position:absolute;content:'✦';color:#e6d4ff75;font-size:25px}.hero-contenido:before{top:4px;left:3%}.hero-contenido:after{right:5%;bottom:10px}.titulo-seccion p{display:inline-block;padding:6px 11px;border-radius:18px;background:#eee4ff;color:#6c39bf}.titulo-claro p{background:#ffffff1c;color:#f1e8ff}.tarjeta-destino{box-shadow:0 10px 24px #42226b24}.imagen-destino{position:relative}.imagen-destino:after{position:absolute;right:0;bottom:0;left:0;height:35%;content:'';background:linear-gradient(transparent,#170d2d4f)}.chip{position:relative;z-index:1}.filtro,.boton-favoritos{box-shadow:0 3px 8px #351b5b12}.filtro.activo{box-shadow:0 5px 12px #5521ac45}.paquete{border:1px solid #d9c8f4}.beneficios{box-shadow:0 8px 20px #311d5014}.pie-superior a{padding:8px 12px;border-radius:8px}.pie-superior a:hover{background:#ffffff12}.form-auth input:focus,#form-busqueda input:focus,#form-busqueda select:focus{outline:3px solid #c9a8ff70;border-color:#7540d0}
+
+/* Acceso a la cuenta */
+#modal-auth { z-index:50; overflow-y:auto; }
+#modal-auth .auth-contenido { display:grid; grid-template-columns:minmax(230px,.8fr) minmax(410px,1.2fr); width:min(900px,100%); max-width:900px; max-height:calc(100vh - 40px); padding:0; overflow:hidden; border-radius:20px; box-shadow:0 25px 70px #120b217a; }
+.auth-presentacion { display:flex; flex-direction:column; justify-content:center; padding:42px 34px; color:#fff; background:linear-gradient(145deg,#321957,#7140bf 57%,#a45df2); }
+.auth-presentacion > span { width:54px; height:54px; display:grid; place-items:center; margin-bottom:28px; border:1px solid #ffffff63; border-radius:17px; background:#ffffff19; font-size:26px; transform:rotate(-12deg); }
+.auth-presentacion p { margin:0 0 12px; color:#e8d7ff; font-size:10px; font-weight:800; letter-spacing:1.5px; }
+.auth-presentacion strong { font-size:27px; line-height:1.15; }
+.auth-presentacion small { margin-top:19px; color:#f4edff; font-size:12px; line-height:1.65; }
+.auth-formulario { max-height:calc(100vh - 40px); padding:32px 38px 24px; overflow-y:auto; background:#fff; }
+#modal-auth .pestanas-auth { margin:0 0 24px; border:0; gap:7px; }
+#modal-auth .pestana { width:auto; flex:1; padding:10px 8px; border:1px solid #e2d5f2; border-radius:9px; background:#faf8fe; color:#725c92; font-size:12px; }
+#modal-auth .pestana.activa { border-color:#7040c7; color:#fff; background:#6b39bd; }
+#modal-auth .form-auth { gap:7px; }
+#modal-auth .form-auth h2 { margin:0; color:#2b1c41; font-size:26px; letter-spacing:-.6px; }
+#modal-auth .form-auth > p:not(.etiqueta):not(.mensaje-auth):not(.cambio-auth) { margin:0 0 10px; color:#705c8b; font-size:12px; line-height:1.55; }
+#modal-auth .form-auth label { color:#37244f; font-size:12px; }
+#modal-auth .form-auth input { min-height:45px; padding:11px 12px; border-color:#d8cae9; }
+#modal-auth .form-auth input::placeholder { color:#a191b7; }
+#modal-auth .form-auth input:focus { outline:3px solid #c9a8ff70; border-color:#7540d0; }
+.campo-clave { position:relative; }
+.campo-clave input { width:100%; padding-right:78px !important; }
+.ver-clave { position:absolute; top:50%; right:8px; padding:6px 7px; border:0; color:#6435ae; background:transparent; font-family:inherit; font-size:11px; font-weight:800; cursor:pointer; transform:translateY(-50%); }
+.opciones-auth { display:flex; align-items:center; justify-content:space-between; gap:10px; margin:4px 0 3px; }
+#modal-auth .checkbox { margin:0; color:#6f5d86; font-size:11px; font-weight:500 !important; line-height:1.4; }
+#modal-auth .checkbox input { min-height:0; margin:0; accent-color:#6d38ce; }
+#modal-auth .checkbox-legal { margin-top:5px; }
+#modal-auth .checkbox a { color:#6032aa; font-weight:800; text-decoration:underline; }
+.opcional { color:#816d99; font-weight:500; }
+.ayuda-campo { margin:-2px 0 3px; color:#806b99; font-size:10px; line-height:1.4; }
+.mensaje-auth { min-height:0; margin:0 !important; color:#705b89; font-size:11px !important; line-height:1.45 !important; }
+.mensaje-auth.error { padding:9px 10px; border-radius:7px; color:#9b2525; background:#fff0f0; }
+.mensaje-auth.exito { padding:9px 10px; border-radius:7px; color:#266c48; background:#ebf9f0; }
+#modal-auth .form-auth .boton { min-height:45px; margin-top:8px; border-radius:8px; background:linear-gradient(105deg,#6233b5,#8546df); font-size:13px; font-weight:800; }
+.cambio-auth { margin:4px 0 0 !important; color:#735e8f; font-size:11px !important; text-align:center; }
+#modal-auth .link-form { padding:0; color:#6334b1; font-size:11px; font-weight:800; }
+.seguridad-auth { display:flex; align-items:center; justify-content:center; gap:6px; margin:19px 0 0; color:#806c98; font-size:10px; text-align:center; }
+.seguridad-auth span { color:#7140c8; font-size:14px; }
+
+@media (max-width:760px) {
+  #modal-auth { align-items:flex-start; padding:16px; }
+  #modal-auth .auth-contenido { display:block; max-height:none; margin:auto 0; border-radius:16px; }
+  .auth-presentacion { display:none; }
+  .auth-formulario { max-height:none; padding:30px 23px 21px; overflow:visible; }
+  #modal-auth .form-auth h2 { font-size:24px; }
+  .opciones-auth { align-items:flex-start; flex-direction:column; }
+}
+
+/* Solicitud de reserva */
+.checkout { z-index:51; overflow-y:auto; }
+.checkout .checkout-contenido { width:min(760px,100%); max-width:760px; max-height:calc(100vh - 40px); padding:34px 36px 28px; overflow-y:auto; border:1px solid #fff; border-radius:18px; box-shadow:0 25px 70px #120b217a; }
+.checkout-cabecera { padding-right:35px; }
+.checkout-cabecera .etiqueta { margin:0 0 7px; color:#7040c8; }
+.checkout-cabecera h2 { margin:0; color:#2c1d43; font-size:27px; letter-spacing:-.6px; }
+.checkout-cabecera > p:not(.etiqueta) { margin:9px 0 0; color:#705d89; font-size:12px; line-height:1.55; }
+.pasos-checkout { display:flex; gap:12px; margin:22px 0; padding:0; list-style:none; color:#9684ab; font-size:10px; font-weight:800; }
+.pasos-checkout li { display:flex; align-items:center; gap:6px; }
+.pasos-checkout span { width:20px; height:20px; display:grid; place-items:center; border:1px solid #d9cce9; border-radius:50%; background:#fff; font-size:10px; }
+.pasos-checkout .activo { color:#6133ae; }.pasos-checkout .activo span { border-color:#6d38ca; color:#fff; background:#6d38ca; }
+.resumen-checkout { margin:0 0 23px; overflow:hidden; border:1px solid #e2d6f0; border-radius:11px; background:#fbf9fe; }
+.resumen-checkout-titulo { display:flex; align-items:center; justify-content:space-between; padding:11px 14px; border-bottom:1px solid #ebe3f4; color:#4d356d; background:#f3edfb; font-size:12px; font-weight:800; }
+.resumen-checkout-titulo b { color:#6d3abe; font-size:10px; }
+.resumen-checkout-items { padding:2px 14px; }.resumen-checkout-items p { display:flex; justify-content:space-between; gap:16px; margin:10px 0; color:#4c3a63; font-size:11px; }.resumen-checkout-items p > span { display:flex; flex-direction:column; gap:3px; }.resumen-checkout-items small { color:#89799d; font-size:10px; }.resumen-checkout-items strong { white-space:nowrap; color:#443057; font-size:11px; }
+.resumen-checkout-total { padding:10px 14px 12px; border-top:1px solid #ebe3f4; }.resumen-checkout-total p { display:flex; justify-content:space-between; margin:0 0 6px; color:#77658e; font-size:11px; }.resumen-checkout-total strong { color:#4a3860; }.resumen-checkout-total .total { margin:11px 0 0; padding-top:10px; border-top:1px dashed #dacbe9; color:#35234d; font-size:13px; font-weight:800; }.resumen-checkout-total .total strong { color:#6334b2; }
+.aclaracion-checkout { display:block; padding:0 14px 13px; color:#806d96; font-size:9px; line-height:1.45; }
+.checkout .form-auth { gap:10px; }.checkout fieldset { margin:0; padding:0; border:0; }.checkout legend { width:100%; margin:0 0 10px; padding-top:5px; color:#3a294f; font-size:13px; font-weight:800; }.checkout label { display:flex; flex-direction:column; gap:5px; color:#5b476f; font-size:11px; font-weight:700; }.checkout input,.checkout select,.checkout textarea { width:100%; padding:11px; border:1px solid #d7cae7; border-radius:7px; color:#332349; background:#fff; font:inherit; font-size:12px; }.checkout textarea { resize:vertical; }.checkout input:focus,.checkout select:focus,.checkout textarea:focus { outline:3px solid #c9a8ff70; border-color:#7540d0; }.campos-dobles { display:grid; grid-template-columns:1fr 1fr; gap:11px; margin-bottom:10px; }.checkout .checkbox { display:flex; flex-direction:row; align-items:flex-start; gap:8px; color:#705d87; font-size:10px; font-weight:500; line-height:1.45; }.checkout .checkbox input { width:auto; margin:1px 0 0; accent-color:#6d38ce; }.mensaje-checkout { min-height:0; margin:0; color:#a02020; font-size:11px; line-height:1.4; }.checkout .boton-modal { min-height:45px; margin-top:3px; border-radius:8px; background:linear-gradient(105deg,#6233b5,#8546df); font-size:13px; font-weight:800; }.checkout-ayuda { margin:2px 0 0; color:#7c6b91; font-size:10px; line-height:1.5; text-align:center; }.checkout-ayuda a { color:#6133ae; font-weight:800; text-decoration:underline; }
+.lista-reservas { display:grid; gap:10px; }.reserva-cuenta { padding:12px; border:1px solid #e3d8f0; border-radius:9px; background:#fbf9fe; }.reserva-cuenta span { display:inline-block; margin-bottom:8px; padding:4px 7px; border-radius:10px; color:#6534b1; background:#ede3ff; font-size:9px; font-weight:800; }.reserva-cuenta h3 { margin:0 0 6px; color:#38264e; font-size:13px; }.reserva-cuenta p { margin:0 0 9px; color:#78678d; font-size:10px; line-height:1.45; }.reserva-cuenta strong { color:#6334b1; font-size:12px; }
+@media (max-width:760px) { .checkout { align-items:flex-start; padding:16px; }.checkout .checkout-contenido { max-height:none; margin:auto 0; padding:29px 21px 23px; }.checkout-cabecera h2 { font-size:24px; }.pasos-checkout { justify-content:space-between; gap:5px; font-size:9px; }.pasos-checkout li { gap:4px; }.campos-dobles { grid-template-columns:1fr; gap:10px; } }
+
+/* Tarjetas de destinos y detalles visuales */
+.hero-contenido:before,.hero-contenido:after,.beneficios:before,.mapa:before,.chat-boton:before { display:none; content:none; }
+.meta-destino { display:block; margin:9px 0 8px; color:#eadfff; font-size:10px; font-weight:700; letter-spacing:.2px; }
+.acciones-tarjeta { display:grid; grid-template-columns:1fr auto auto; gap:8px; align-items:center; }
+.comprar-destino { min-height:34px; padding:8px 10px; border:0; border-radius:8px; color:#6232b3; background:#fff; font-family:inherit; font-size:11px; font-weight:800; cursor:pointer; transition:transform .15s ease,background .15s ease; }
+.comprar-destino:hover { background:#f0e6ff; transform:translateY(-1px); }
+.detalle { min-height:34px; padding:7px 8px; border:1px solid #ffffff78; border-radius:8px; font-size:11px; }
+.corazon { width:34px; height:34px; }
+.tarjeta-destino { transition:transform .18s ease,box-shadow .18s ease; }.tarjeta-destino:hover { transform:translateY(-4px); box-shadow:0 16px 28px #42226b36; }
+@media (max-width:760px) { .tarjeta-destino:hover { transform:none; }.acciones-tarjeta { grid-template-columns:1fr auto auto; } }
+
+/* Páginas legales */
+.pagina-legal { min-height:100vh; background:linear-gradient(145deg,#f9f6ff,#eee6fb); }
+.contenido-legal { max-width:820px; padding:65px 0 80px; }
+.volver-inicio { display:inline-block; margin-bottom:32px; color:#6434b1; font-size:13px; font-weight:800; }
+.contenido-legal .etiqueta { color:#6d3bc0; }
+.contenido-legal h1 { margin:7px 0 17px; color:#2f2144; font-size:36px; letter-spacing:-1px; }
+.contenido-legal h2 { margin:30px 0 9px; color:#432c63; font-size:19px; }
+.contenido-legal p { max-width:700px; color:#5d4c71; font-size:14px; line-height:1.75; }
+.contenido-legal p a { color:#6033ac; font-weight:800; text-decoration:underline; }
+@media (max-width:760px) { .contenido-legal { width:86%; padding:42px 0 60px; }.contenido-legal h1 { font-size:30px; } }
