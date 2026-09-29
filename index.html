@@ -28,7 +28,7 @@
       </nav>
       <div class="acciones-cuenta">
         <button type="button" class="selector-moneda" data-accion="cambiar-moneda"><span>Moneda</span><b>USD</b></button>
-        <button type="button" class="boton-cuenta" data-accion="abrir-login"><span class="usuario-icono">◉</span> Ingresar</button>
+        <button type="button" class="boton-cuenta" data-accion="abrir-login" data-cuenta-acceso><span class="usuario-icono" aria-hidden="true">◉</span><span class="texto-cuenta">Ingresar</span></button>
       </div>
     </div>
   </header>
@@ -83,7 +83,7 @@
           </article>
           <article class="tarjeta-destino bolivia" data-region="sudamerica" data-destino="Bolivia" data-precio="USD 990">
             <div class="imagen-destino"><span class="chip">Sudamérica</span></div>
-            <div class="info-destino"><h3>Viaje a Bolivia</h3><p>Naturaleza, altura y aventura pura.</p><span>Desde USD 990</span><div class="acciones-tarjeta"><button type="button" class="detalle" data-accion="detalle">Ver detalle</button><button type="button" class="corazon" aria-label="Agregar Bolivia a favoritos" data-accion="favorito">♡</button></div></div>
+            <div class="info-destino"><h3>Bolivia: Salar de Uyuni</h3><p>Altiplano, cultura andina y paisajes que parecen de otro mundo.</p><span>Desde USD 990</span><div class="acciones-tarjeta"><button type="button" class="detalle" data-accion="detalle">Ver detalle</button><button type="button" class="corazon" aria-label="Agregar Bolivia a favoritos" data-accion="favorito">♡</button></div></div>
           </article>
           <article class="tarjeta-destino suiza" data-region="europa" data-destino="Suiza" data-precio="USD 2.100">
             <div class="imagen-destino"><span class="chip">Europa</span></div>
@@ -114,8 +114,8 @@
           <h2 id="titulo-viajes">Encontrá tu próxima experiencia</h2>
         </div>
         <article class="ficha-viaje ficha-bolivia">
-          <div class="foto-ficha" role="img" aria-label="Playa tropical de Bolivia"></div>
-          <div class="detalle-ficha"><div class="ficha-cabecera"><h3>Viaje a Bolivia</h3><strong>USD 990</strong></div><p>Conocé Bolivia a través de un viaje que incluye hoteles seleccionados, transporte y visitas a destinos turísticos. Explorá el Salar de Uyuni, La Paz y paisajes naturales únicos.</p><ul><li>7 noches de alojamiento</li><li>Desayunos incluidos</li><li>Traslados y excursiones</li></ul><button class="boton boton-claro consultar" type="button" data-destino="Bolivia">Consultar viaje</button></div>
+          <div class="foto-ficha" role="img" aria-label="Salar de Uyuni, Bolivia"></div>
+          <div class="detalle-ficha"><div class="ficha-cabecera"><h3>Bolivia: Salar de Uyuni</h3><strong>USD 990</strong></div><p>Descubrí el altiplano boliviano en un recorrido pensado para combinar el Salar de Uyuni, La Paz y la cultura andina. Una propuesta ideal para viajeros que buscan paisajes únicos y experiencias auténticas.</p><ul><li>7 noches de alojamiento</li><li>Desayunos incluidos</li><li>Traslados y excursiones seleccionadas</li></ul><button class="boton boton-claro consultar" type="button" data-destino="Bolivia">Consultar viaje</button></div>
         </article>
         <article class="ficha-viaje ficha-polonia">
           <div class="foto-ficha" role="img" aria-label="Parque junto a un lago en Polonia"></div>
@@ -149,18 +149,69 @@
     <div class="carrito-resumen"><p><span>Subtotal</span><strong id="subtotal-carrito">USD 0</strong></p><p><span>Impuestos estimados</span><strong id="impuestos-carrito">USD 0</strong></p><div><span>Total estimado</span><strong id="total-carrito">USD 0</strong></div><button type="button" class="boton boton-checkout" data-accion="checkout">Continuar reserva</button><button type="button" class="vaciar-carrito" data-accion="vaciar-carrito">Vaciar carrito</button></div>
   </aside>
 
-  <section class="modal-auth" id="modal-auth" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="auth-titulo"><div class="auth-contenido"><button class="cerrar-panel" type="button" data-accion="cerrar-auth" aria-label="Cerrar">×</button><div class="pestanas-auth"><button type="button" class="pestana activa" data-auth="login">Iniciar sesión</button><button type="button" class="pestana" data-auth="registro">Registrarse</button></div><form id="form-login" class="form-auth"><h2 id="auth-titulo">Bienvenido de nuevo</h2><p>Ingresá para ver tus reservas y guardar favoritos.</p><label for="email-login">Correo electrónico</label><input id="email-login" type="email" required placeholder="nombre@email.com"><label for="clave-login">Contraseña</label><input id="clave-login" type="password" required minlength="4" placeholder="••••••••"><button class="boton boton-modal" type="submit">Ingresar a mi cuenta</button><button type="button" class="link-form" data-accion="recuperar-clave">Olvidé mi contraseña</button></form><form id="form-registro" class="form-auth oculto"><h2>Creá tu cuenta BITA</h2><p>Registrate gratis y empezá a planear tu viaje.</p><label for="nombre-registro">Nombre completo</label><input id="nombre-registro" type="text" required placeholder="Tu nombre"><label for="email-registro">Correo electrónico</label><input id="email-registro" type="email" required placeholder="nombre@email.com"><label for="clave-registro">Contraseña</label><input id="clave-registro" type="password" required minlength="4" placeholder="Mínimo 4 caracteres"><label class="checkbox"><input type="checkbox" required> Acepto los términos y condiciones.</label><button class="boton boton-modal" type="submit">Crear mi cuenta</button></form></div></section>
-  <section class="checkout modal-auth" id="checkout" aria-hidden="true"><div class="auth-contenido"><button class="cerrar-panel" type="button" data-accion="cerrar-checkout">×</button><h2>Finalizar reserva</h2><p class="texto-checkout">Completá los datos del pasajero. Esta es una confirmación simulada.</p><form id="form-checkout" class="form-auth"><label>Nombre y apellido<input required placeholder="Como figura en el documento"></label><label>Documento<input required pattern="[0-9]{7,10}" placeholder="DNI o pasaporte"></label><label>Fecha de nacimiento<input required type="date"></label><label>Fecha de salida<input required type="date"></label><label>Pasajeros<select required><option value="">Seleccionar</option><option>1 pasajero</option><option>2 pasajeros</option><option>3 pasajeros</option><option>4 o más pasajeros</option></select></label><label>Habitación<select required><option value="">Seleccionar</option><option>Doble</option><option>Triple</option><option>Individual</option></select></label><label>Medio de pago<select required><option value="">Seleccionar</option><option>Tarjeta de crédito</option><option>Transferencia bancaria</option><option>Mercado Pago</option></select></label><button class="boton boton-modal" type="submit">Confirmar solicitud</button></form></div></section>
+  <section class="modal-auth" id="modal-auth" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="auth-titulo">
+    <div class="auth-contenido">
+      <button class="cerrar-panel" type="button" data-accion="cerrar-auth" aria-label="Cerrar acceso a mi cuenta">×</button>
+      <div class="auth-presentacion" aria-hidden="true"><span>✈</span><p>MI CUENTA BITA</p><strong>Tu viaje, siempre a mano.</strong><small>Guardá favoritos, gestioná tus consultas y seguí cada paso de tu próxima aventura.</small></div>
+      <div class="auth-formulario">
+        <div class="pestanas-auth" role="tablist" aria-label="Acceso a mi cuenta">
+          <button type="button" class="pestana activa" data-auth="login" role="tab" aria-selected="true" aria-controls="form-login">Iniciar sesión</button>
+          <button type="button" class="pestana" data-auth="registro" role="tab" aria-selected="false" aria-controls="form-registro">Crear cuenta</button>
+        </div>
+        <form id="form-login" class="form-auth" novalidate>
+          <p class="etiqueta">Hola de nuevo</p><h2 id="auth-titulo">Ingresá a tu cuenta</h2><p>Consultá tus reservas, favoritos y solicitudes desde un solo lugar.</p>
+          <label for="email-login">Correo electrónico</label><input id="email-login" name="email" type="email" autocomplete="email" required placeholder="nombre@email.com">
+          <label for="clave-login">Contraseña</label><div class="campo-clave"><input id="clave-login" name="password" type="password" autocomplete="current-password" required minlength="8" placeholder="Ingresá tu contraseña"><button type="button" class="ver-clave" data-clave="clave-login" aria-label="Mostrar contraseña">Mostrar</button></div>
+          <div class="opciones-auth"><label class="checkbox"><input id="recordar-sesion" type="checkbox"> Recordarme en este dispositivo</label><button type="button" class="link-form" data-accion="recuperar-clave">¿Olvidaste tu contraseña?</button></div>
+          <p class="mensaje-auth" id="mensaje-login" role="status" aria-live="polite"></p><button class="boton boton-modal" type="submit">Ingresar de forma segura</button>
+          <p class="cambio-auth">¿Todavía no tenés cuenta? <button type="button" class="link-form" data-accion="ir-registro">Creala sin costo</button></p>
+        </form>
+        <form id="form-registro" class="form-auth oculto" novalidate>
+          <p class="etiqueta">Viajá con beneficios</p><h2>Creá tu cuenta BITA</h2><p>Guardá tus destinos, recibí propuestas personalizadas y gestioná tus reservas.</p>
+          <label for="nombre-registro">Nombre y apellido</label><input id="nombre-registro" name="nombre" type="text" autocomplete="name" required minlength="3" placeholder="Como figura en tu documento">
+          <label for="email-registro">Correo electrónico</label><input id="email-registro" name="email" type="email" autocomplete="email" required placeholder="nombre@email.com">
+          <label for="telefono-registro">WhatsApp <span class="opcional">(opcional)</span></label><input id="telefono-registro" name="telefono" type="tel" autocomplete="tel" inputmode="tel" placeholder="+54 9 11 1234 5678">
+          <label for="clave-registro">Contraseña</label><div class="campo-clave"><input id="clave-registro" name="password" type="password" autocomplete="new-password" required minlength="8" aria-describedby="ayuda-clave" placeholder="Mínimo 8 caracteres"><button type="button" class="ver-clave" data-clave="clave-registro" aria-label="Mostrar contraseña">Mostrar</button></div><small id="ayuda-clave" class="ayuda-campo">Usá al menos 8 caracteres, una mayúscula y un número.</small>
+          <label for="confirmar-clave">Confirmá tu contraseña</label><div class="campo-clave"><input id="confirmar-clave" name="confirmar-password" type="password" autocomplete="new-password" required placeholder="Repetí tu contraseña"><button type="button" class="ver-clave" data-clave="confirmar-clave" aria-label="Mostrar contraseña">Mostrar</button></div>
+          <label class="checkbox checkbox-legal"><input id="acepta-terminos" type="checkbox" required> Acepto los <a href="#inicio">Términos y condiciones</a> y la <a href="#inicio">Política de privacidad</a>.</label>
+          <label class="checkbox"><input id="recibir-novedades" type="checkbox"> Quiero recibir ofertas y novedades de BITA.</label>
+          <p class="mensaje-auth" id="mensaje-registro" role="status" aria-live="polite"></p><button class="boton boton-modal" type="submit">Crear mi cuenta</button>
+          <p class="cambio-auth">¿Ya tenés cuenta? <button type="button" class="link-form" data-accion="ir-login">Iniciá sesión</button></p>
+        </form>
+        <form id="form-recuperar" class="form-auth oculto" novalidate>
+          <p class="etiqueta">Recuperá el acceso</p><h2>Restablecé tu contraseña</h2><p>Ingresá el correo asociado a tu cuenta. Cuando conectemos el correo de BITA, vas a recibir allí las instrucciones para crear una nueva clave.</p>
+          <label for="email-recuperar">Correo electrónico</label><input id="email-recuperar" name="email" type="email" autocomplete="email" required placeholder="nombre@email.com">
+          <p class="mensaje-auth" id="mensaje-recuperar" role="status" aria-live="polite"></p><button class="boton boton-modal" type="submit">Enviar instrucciones</button>
+          <p class="cambio-auth"><button type="button" class="link-form" data-accion="ir-login">← Volver a iniciar sesión</button></p>
+        </form>
+        <p class="seguridad-auth"><span aria-hidden="true">⌑</span> Tus datos se usan solo para gestionar tu experiencia de viaje.</p>
+      </div>
+    </div>
+  </section>
+  <section class="checkout modal-auth" id="checkout" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="titulo-checkout">
+    <div class="auth-contenido checkout-contenido">
+      <button class="cerrar-panel" type="button" data-accion="cerrar-checkout" aria-label="Cerrar reserva">×</button>
+      <div class="checkout-cabecera"><p class="etiqueta">Solicitud de reserva</p><h2 id="titulo-checkout">Estás a un paso de viajar</h2><p>Dejanos tus datos y un asesor BITA confirmará disponibilidad, precio final y formas de pago.</p></div>
+      <ol class="pasos-checkout" aria-label="Etapas de la reserva"><li class="activo"><span>1</span> Tu viaje</li><li class="activo"><span>2</span> Tus datos</li><li><span>3</span> Confirmación</li></ol>
+      <div class="resumen-checkout" id="resumen-checkout" aria-live="polite"></div>
+      <form id="form-checkout" class="form-auth" novalidate>
+        <fieldset><legend>Datos de contacto</legend><div class="campos-dobles"><label for="nombre-checkout">Nombre y apellido<input id="nombre-checkout" name="nombre" required autocomplete="name" placeholder="Como figura en tu documento"></label><label for="email-checkout">Correo electrónico<input id="email-checkout" name="email" required type="email" autocomplete="email" placeholder="nombre@email.com"></label></div><label for="telefono-checkout">WhatsApp de contacto<input id="telefono-checkout" name="telefono" required type="tel" autocomplete="tel" inputmode="tel" placeholder="+54 9 11 1234 5678"></label></fieldset>
+        <fieldset><legend>Datos del viaje</legend><div class="campos-dobles"><label for="salida-checkout">Fecha estimada de salida<input id="salida-checkout" name="salida" required type="date"></label><label for="pasajeros-checkout">Pasajeros<select id="pasajeros-checkout" name="pasajeros" required><option value="">Seleccionar</option><option value="1">1 pasajero</option><option value="2">2 pasajeros</option><option value="3">3 pasajeros</option><option value="4+">4 o más pasajeros</option></select></label></div><label for="habitacion-checkout">Tipo de habitación<select id="habitacion-checkout" name="habitacion" required><option value="">Seleccionar</option><option>Doble</option><option>Triple</option><option>Individual</option></select></label><label for="comentarios-checkout">¿Hay algo que debamos saber? <span class="opcional">(opcional)</span><textarea id="comentarios-checkout" name="comentarios" rows="3" placeholder="Preferencias, necesidades de movilidad, celebraciones o consultas."></textarea></label></fieldset>
+        <label class="checkbox checkbox-legal"><input id="acepta-reserva" type="checkbox" required> Entiendo que esta solicitud no confirma la reserva ni realiza un cobro. Un asesor BITA me contactará para confirmar los detalles.</label>
+        <p class="mensaje-checkout" id="mensaje-checkout" role="status" aria-live="polite"></p><button class="boton boton-modal" type="submit">Enviar solicitud de reserva</button><p class="checkout-ayuda">¿Necesitás ayuda? Escribinos por <a href="mailto:hola@bita.com">correo</a> o llamanos al <a href="tel:+541155555555">+54 11 5555 5555</a>.</p>
+      </form>
+    </div>
+  </section>
   <section class="modal-auth" id="confirmacion" aria-hidden="true"><div class="auth-contenido confirmacion"><div class="check-confirmacion">✓</div><p class="etiqueta">Solicitud enviada</p><h2>¡Tu viaje está en marcha!</h2><p id="texto-confirmacion"></p><button class="boton boton-modal" type="button" data-accion="cerrar-confirmacion">Entendido</button></div></section>
   <aside class="panel-cuenta" id="panel-cuenta"><button class="cerrar-panel" type="button" data-accion="cerrar-cuenta">×</button><p class="etiqueta">Mi cuenta</p><h2 id="nombre-cuenta">Viajero BITA</h2><div class="tabs-cuenta"><button data-tab="reservas">Reservas</button><button data-tab="guardados">Guardados</button><button data-tab="perfil">Perfil</button></div><div id="contenido-cuenta"></div></aside>
   <button class="chat-boton" data-accion="abrir-chat">◌ Chat</button><section class="chat" id="chat"><div class="chat-top">Asistencia BITA <button data-accion="cerrar-chat">×</button></div><div class="chat-mensajes" id="chat-mensajes"><p>Hola, ¿en qué podemos ayudarte?</p></div><form id="form-chat"><input required placeholder="Escribí tu consulta..."><button>Enviar</button></form></section>
-  <nav class="nav-movil" aria-label="Navegación rápida"><a href="#inicio">⌂<span>Inicio</span></a><button data-accion="mostrar-buscador">⌕<span>Buscar</span></button><button data-accion="abrir-carrito">▣<span>Carrito</span></button><button data-accion="abrir-login">◉<span>Cuenta</span></button></nav>
+  <nav class="nav-movil" aria-label="Navegación rápida"><a href="#inicio">⌂<span>Inicio</span></a><button data-accion="mostrar-buscador">⌕<span>Buscar</span></button><button data-accion="abrir-carrito">▣<span>Carrito</span></button><button data-accion="abrir-login" data-cuenta-acceso>◉<span class="texto-cuenta">Cuenta</span></button></nav>
 
   <div class="aviso" id="aviso" role="status" aria-live="polite"></div>
 
   <footer id="contacto">
     <div class="contenedor pie-superior"><a href="mailto:hola@bita.com">✉ <span>hola@bita.com</span></a><a href="tel:+541155555555">☎ <span>+54 11 5555 5555</span></a><a href="#inicio">⌂ <span>Buenos Aires, Argentina</span></a></div>
-    <div class="pie-inferior"><div class="contenedor"><p>© 2026 BITA Turismo. Todos los derechos reservados.</p><div><a href="#inicio">Términos</a><a href="#inicio">Privacidad</a></div></div></div>
+    <div class="pie-inferior"><div class="contenedor"><p>© 2026 BITA Turismo. Todos los derechos reservados.</p><div><a href="terminos.html">Términos</a><a href="privacidad.html">Privacidad</a></div></div></div>
   </footer>
 </body>
 </html>
