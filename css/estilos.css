@@ -70,7 +70,7 @@ a { color:inherit; text-decoration:none; }
 .paquete { width:31%; min-width:0; overflow:hidden; border-radius:12px; background:#7540d4; color:#fff; box-shadow:0 8px 22px #27154a24; }
 .paquete-foto { height:175px; padding:12px; display:flex; justify-content:flex-end; align-items:flex-start; background-size:cover; background-position:center; }
 .paquete-poland .paquete-foto { background-image:linear-gradient(135deg,#3e1a80aa,#9655df55),url('https://images.unsplash.com/photo-1526129318478-62ed807ebdf9?auto=format&fit=crop&w=800&q=85'); }
-.paquete-spain .paquete-foto { background-image:linear-gradient(#00000010,#00000040),url('https://images.unsplash.com/photo-1543783207-ec64e4d95325?auto=format&fit=crop&w=800&q=85'); }
+.paquete-japon .paquete-foto { background-image:linear-gradient(#00000010,#00000040),url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=85'); }
 .paquete-info { padding:20px; }
 .paquete-destino { margin:0 0 7px; color:#e3cfff; font-size:10px; font-weight:800; letter-spacing:1px; }
 .paquete h3 { margin:0 0 8px; font-size:21px; }
@@ -308,3 +308,412 @@ footer { background:#5c3ba1; color:#fff; }
 .contacto-lateral { display:grid; min-width:310px; gap:16px; }.form-contacto { display:grid; grid-template-columns:1fr 1fr; gap:9px; padding:15px; border:1px solid #ffffff36; border-radius:11px; background:#ffffff10; }.form-contacto label { display:flex; flex-direction:column; gap:5px; color:#ede5fb; font-size:10px; font-weight:800; }.form-contacto input,.form-contacto textarea { box-sizing:border-box; width:100%; padding:9px 10px; border:1px solid #ffffff50; border-radius:7px; color:#392352; background:#fff; font:inherit; font-size:11px; }.form-contacto textarea { min-height:60px; resize:vertical; }.form-contacto label:nth-of-type(2),.form-contacto .mensaje-contacto,.form-contacto button,.form-contacto small { grid-column:1 / -1; }.form-contacto .mensaje-contacto { min-height:0; margin:0; color:#fff0b8; font-size:10px; }.form-contacto .boton { min-height:38px; border:0; border-radius:7px; color:#5d31a6; background:#fff; font-size:11px; font-weight:800; cursor:pointer; }.form-contacto small { color:#ded1f5; font-size:9px; line-height:1.4; }
 .tarjeta-destino .imagen-destino { background-color:#56319b; }
 @media (max-width:760px) { .texto-nosotros { font-size:12px; }.forma-trabajo { grid-template-columns:1fr; margin-top:28px; }.forma-trabajo article { min-height:0; }.mapa-visual { height:180px; }.contacto-lateral { width:100%; min-width:0; }.form-contacto { grid-template-columns:1fr; }.form-contacto label:nth-of-type(2),.form-contacto .mensaje-contacto,.form-contacto button,.form-contacto small { grid-column:auto; } }
+
+/* Solicitud, aprobación y pago simulado */
+.simulacion-pago { z-index:53; overflow:auto; }
+.simulacion-pago .auth-contenido { max-width:520px; max-height:calc(100vh - 40px); overflow:auto; padding:34px; }
+.simulacion-pago h2 { margin:0 36px 9px 0; color:#332348; font-size:23px; }
+.texto-pago-simulacion { color:#705c88; font-size:12px; line-height:1.55; }
+.aviso-simulacion { margin:14px 0; padding:10px 12px; border:1px solid #eddaa2; border-radius:8px; color:#765617; background:#fff8e5; font-size:11px; line-height:1.5; }
+.opciones-resultado-pago { display:grid; gap:9px; }
+.opciones-resultado-pago button { min-height:42px; border-radius:8px; font-family:inherit; font-weight:800; cursor:pointer; }
+.pago-aprobado { background:#e1f3e5 !important; color:#28633b !important; border:1px solid #a7d4b1 !important; }
+.pago-pendiente { background:#fff3d8 !important; color:#79571c !important; border:1px solid #e9d29a !important; }
+.pago-rechazado { background:#fff0f0 !important; color:#982f36 !important; border:1px solid #e4b4b8 !important; }
+.volver-checkout { display:block; margin:12px auto 0; }
+@media(max-width:760px) { .simulacion-pago { align-items:flex-start; padding:14px; } .simulacion-pago .auth-contenido { max-height:none; margin:auto 0; padding:28px 20px; } }
+
+
+.form-pago-tarjeta { display:flex; flex-direction:column; gap:11px; }.form-pago-tarjeta label { display:flex; flex-direction:column; gap:5px; color:#5b476f; font-size:11px; font-weight:700; }.form-pago-tarjeta input { width:100%; padding:11px; border:1px solid #d7cae7; border-radius:7px; color:#332349; background:#fff; font:inherit; font-size:12px; }.form-pago-tarjeta input:focus { outline:3px solid #c9a8ff70; border-color:#7540d0; }.form-pago-tarjeta .campos-dobles { margin:0; }.form-pago-tarjeta .boton { min-height:45px; margin-top:4px; border-radius:8px; font-weight:800; cursor:pointer; }.accion-reserva-demo { display:block; width:100%; margin-top:11px; padding:10px 12px; border:1px solid #d6c5ec; border-radius:8px; color:#6032a8; background:#f6f0ff; font-family:inherit; font-size:11px; font-weight:800; cursor:pointer; }.accion-reserva-demo:hover { background:#ede2ff; }
+.oferta-contenido > [data-accion="oferta"] { position:relative; display:inline-flex; align-items:center; justify-content:center; gap:10px; min-height:54px; padding:0 25px; border:1px solid #ffe49a; border-radius:14px; color:#39204f; background:linear-gradient(135deg,#fff2b8,#ffc85c); box-shadow:0 8px 22px #130a2c55,inset 0 1px #fff9d8; font-size:14px; font-weight:900; letter-spacing:.1px; transition:transform .18s ease,box-shadow .18s ease,filter .18s ease; }
+.oferta-contenido > [data-accion="oferta"]::before { content:'✈'; display:grid; width:29px; height:29px; place-items:center; border-radius:9px; color:#fff; background:#6232ae; font-size:15px; }
+.oferta-contenido > [data-accion="oferta"]::after { content:'15% OFF'; position:absolute; top:-10px; right:-9px; padding:4px 8px; border:2px solid #432475; border-radius:20px; color:#fff; background:#8a4de0; font-size:9px; font-weight:900; letter-spacing:.5px; }
+.oferta-contenido > [data-accion="oferta"]:hover { filter:brightness(1.04); transform:translateY(-3px); box-shadow:0 13px 26px #130a2c66,inset 0 1px #fff9d8; }
+.oferta-contenido > [data-accion="oferta"]:active { transform:translateY(0); }
+.oferta-contenido > [data-accion="oferta"]:focus-visible { outline:3px solid #fff; outline-offset:4px; }
+@media(max-width:760px) { .oferta-contenido { flex-wrap:wrap; justify-content:center; text-align:center; } .oferta-contenido > div:first-child { flex-basis:100%; } .oferta-contenido > [data-accion="oferta"] { flex:1 1 100%; max-width:340px; margin:5px 8px 0; } }
+.simulacion-pago { z-index:54; background:linear-gradient(135deg,#17102bcc,#281849dd); }
+.pago-contenido { max-width:570px !important; max-height:calc(100vh - 28px); overflow-y:auto; padding:28px !important; border:1px solid #eee5fa; border-radius:20px; box-shadow:0 24px 70px #120b2180; }
+.pago-marca { display:flex; align-items:center; gap:13px; padding-right:36px; }
+.pago-marca > span { display:grid; width:45px; height:45px; place-items:center; border-radius:14px; color:#fff; background:linear-gradient(145deg,#7041c1,#9b61e9); font-size:23px; font-weight:900; }
+.pago-marca .etiqueta { margin:0 0 4px; color:#7755a4; font-size:10px; font-weight:800; letter-spacing:.6px; }
+.pago-contenido h2 { margin:0; color:#302044; font-size:25px; letter-spacing:-.5px; }
+.pago-pasos { display:flex; justify-content:space-between; gap:6px; margin:18px 0 15px; padding:11px 12px; border-radius:10px; background:#f7f3fc; }
+.pago-pasos span { color:#9a8ba9; font-size:10px; font-weight:800; }
+.pago-pasos .completo { color:#4c8a61; }.pago-pasos .actual { color:#6639b0; }
+.resumen-pago { margin:0 0 13px; padding:13px 15px; border:1px solid #e9e0f2; border-radius:12px; background:#fbfaff; }
+.resumen-pago p { margin:7px 0; }.resumen-pago .total-pago { margin:11px -4px 4px; padding:12px 4px 2px; border-top:1px solid #ded2ec; font-size:15px; }.resumen-pago .total-pago strong { color:#5b2ca5; font-size:17px; }.resumen-pago .aprobacion-pago { margin-top:9px; color:#627268; font-size:10px; }
+.titulo-metodo-pago { display:flex; align-items:center; justify-content:space-between; margin:3px 0 0; color:#35234c; font-size:12px; font-weight:900; }.titulo-metodo-pago span { color:#6a43a3; font-size:10px; }
+.datos-prueba { margin:-5px 0 2px; padding:9px 10px; border:1px dashed #c8b4e1; border-radius:8px; color:#655277; background:#faf7fe; font-size:10px; line-height:1.5; }.datos-prueba b { color:#59349a; }
+.pago-consentimiento { margin:3px 0; align-items:flex-start; font-size:11px; line-height:1.45; }.pago-consentimiento input { margin-top:2px; accent-color:#6a3bb5; }
+.form-pago-tarjeta .boton { background:linear-gradient(110deg,#5f31a8,#8a4cdb); box-shadow:0 7px 18px #6334ad35; }.form-pago-tarjeta .boton:hover { filter:brightness(1.07); transform:translateY(-1px); }.pie-pago { margin:0; color:#857796; font-size:10px; text-align:center; }
+#panel-agente { z-index:56; }.agente-contenido { max-width:760px; max-height:calc(100vh - 36px); overflow:auto; }.agente-contenido > h2 { margin:0 32px 8px 0; color:#302044; }.agente-aclaracion { padding:12px 14px; border-left:3px solid #8a55d0; border-radius:0 9px 9px 0; color:#66557b; background:#f8f4fd; font-size:12px; line-height:1.55; }.campo-agente,.solicitud-agente label { display:flex; flex-direction:column; gap:6px; color:#4d3b63; font-size:11px; font-weight:800; }.campo-agente input,.solicitud-agente input,.solicitud-agente textarea { width:100%; padding:10px 11px; border:1px solid #d8cbe8; border-radius:8px; color:#302044; background:#fff; font:inherit; font-weight:500; }.titulo-cola { display:flex; align-items:center; gap:9px; margin:22px 0 11px; color:#302044; font-size:15px; }.titulo-cola span { display:grid; min-width:22px; height:22px; place-items:center; border-radius:50%; color:#fff; background:#7643c2; font-size:10px; }
+.solicitud-agente { margin:11px 0; padding:16px; border:1px solid #e3d8ef; border-radius:13px; background:#fff; box-shadow:0 5px 15px #39224f0d; }.solicitud-agente-top { display:flex; justify-content:space-between; gap:8px; color:#7652a8; font-size:10px; font-weight:900; }.solicitud-agente-top small { color:#887b97; font-weight:500; }.solicitud-agente h3 { margin:8px 0; color:#302044; font-size:16px; }.solicitud-agente p { margin:5px 0; color:#695b7d; font-size:11px; line-height:1.5; }.solicitud-agente label { margin-top:10px; }.solicitud-agente textarea { resize:vertical; }.acciones-agente { display:flex; gap:9px; margin-top:12px; }.acciones-agente button { flex:1; min-height:41px; padding:8px 10px; border:1px solid #d9cce9; border-radius:8px; color:#6033a3; background:#f8f3ff; font:inherit; font-size:11px; font-weight:900; cursor:pointer; }.acciones-agente button:first-child { border-color:#663bb0; color:#fff; background:#663bb0; }.acciones-agente button:last-child { color:#a13c47; background:#fff8f8; }.cola-vacia { padding:22px 14px; border:1px dashed #cfc0e2; border-radius:12px; color:#513675; background:#faf7fe; text-align:center; }.cola-vacia p { margin-bottom:0; color:#7c6e8d; font-size:12px; }.historial-agente { margin-top:18px; color:#655478; font-size:11px; }.historial-agente summary { cursor:pointer; font-weight:800; }.historial-agente p { margin:7px 0; }
+.solicitud-agente label:has(.nota-agente) { margin-top:18px; gap:7px; }
+.solicitud-agente label:has(.nota-agente) > span { display:block; margin-top:2px; color:#806b99; font-weight:600; line-height:1.45; }
+.solicitud-agente .nota-agente { min-height:68px; max-height:140px; overflow-y:auto; line-height:1.5; }
+.agente-barra-cuenta { display:flex; align-items:center; justify-content:space-between; gap:12px; margin:10px 0 18px; padding:10px 12px; border:1px solid #e8def2; border-radius:10px; background:#faf8fd; }
+.agente-barra-cuenta .identidad-agente { margin:0; }
+.agente-cerrar-sesion { flex:0 0 auto; padding:8px 11px; border:1px solid #dfd2ed; border-radius:8px; color:#68439c; background:#fff; font:inherit; font-size:10px; font-weight:800; cursor:pointer; }
+.agente-cerrar-sesion:hover { background:#f2ecf9; }
+.sesion-personal .valija,
+.sesion-personal .avion,
+.sesion-personal .nav-movil [data-accion="abrir-carrito"],
+.sesion-personal [data-accion="agregar-carrito"],
+.sesion-personal .comprar-destino,
+.sesion-personal [data-accion="agregar-desde-detalle"],
+.sesion-personal [data-accion="oferta"],
+.sesion-personal .corazon,
+.sesion-personal .chat-boton,
+.sesion-personal #chat,
+.sesion-personal #form-contacto,
+.sesion-personal .consultar,
+.sesion-personal [data-accion="mostrar-asistencia"] { display:none !important; }
+.acceso-equipo-demo { display:block; width:100%; margin:6px 0 14px; padding:9px; border:1px dashed #ad92cf; border-radius:8px; color:#62438b; background:#faf7ff; font:inherit; font-size:10px; font-weight:800; cursor:pointer; }.acceso-equipo-demo:hover { background:#f0e8fb; }
+@media(max-width:600px) { .pago-contenido { padding:22px 18px !important; }.pago-pasos span { font-size:8px; }.agente-contenido { padding:25px 18px; }.acciones-agente { flex-direction:column; } }
+.marca { position:relative; }
+.marca-texto { position:absolute; left:50%; transform:translateX(-50%); white-space:nowrap; }
+
+/* Vista previa de las fechas y enlaces de pago */
+.vista-previa-cronograma { display:grid; gap:0; margin:13px 0; padding:0; list-style:none; border-top:1px solid #eee7f4; }
+.vista-previa-cronograma li { display:flex; justify-content:space-between; gap:12px; padding:9px 2px; border-bottom:1px solid #eee7f4; color:#625373; font-size:11px; }
+.vista-previa-cronograma li strong { color:#38264e; white-space:nowrap; }
+.enlace-pago-contenido { max-width:480px !important; }
+.enlace-pago-contenido h2 { margin:0 35px 12px 0; color:#302044; }
+.enlace-pago-contenido p { color:#6b5c7b; font-size:12px; line-height:1.55; }
+.enlace-pago-contenido label { display:block; margin:18px 0 6px; color:#5d4a70; font-size:11px; font-weight:800; }
+.enlace-pago-contenido input { width:100%; padding:11px; border:1px solid #d9cde7; border-radius:8px; font:inherit; font-size:11px; }
+.enlace-pago-contenido [data-accion="copiar-link-pago"] { width:100%; margin-top:10px; }
+
+/* Checkout de cuota: resumen claro, formulario guiado y adaptable */
+#pago-simulacion { padding:24px; }
+#pago-simulacion .pago-contenido { box-sizing:border-box; width:min(940px,100%); max-width:940px !important; max-height:calc(100vh - 48px); padding:32px !important; border:1px solid #eee7f7; border-radius:24px; background:#fff; }
+#pago-simulacion .pago-marca { padding-right:42px; }
+#pago-simulacion .pago-marca > span { width:48px; height:48px; border-radius:16px; background:linear-gradient(145deg,#6031aa,#a06ce7); box-shadow:0 7px 18px #7244b132; }
+#pago-simulacion .pago-contenido h2 { font-size:clamp(24px,3vw,30px); letter-spacing:-.8px; }
+#pago-simulacion .texto-pago-simulacion { margin:8px 0 0; color:#756687; font-size:13px; }
+#pago-simulacion .pago-pasos { justify-content:flex-start; gap:clamp(12px,4vw,42px); margin:22px 0; padding:12px 16px; border:1px solid #eee7f5; background:#fbf9fe; list-style:none; }
+#pago-simulacion .pago-pasos li { display:flex; align-items:center; gap:7px; color:#9386a2; font-size:11px; font-weight:800; }
+#pago-simulacion .pago-pasos li > span { display:grid; width:22px; height:22px; place-items:center; border-radius:50%; color:#fff; background:#b9aec7; font-size:10px; }
+#pago-simulacion .pago-pasos .completo { color:#43815c; }
+#pago-simulacion .pago-pasos .completo > span { background:#55a775; }
+#pago-simulacion .pago-pasos .actual { color:#5e35a0; }
+#pago-simulacion .pago-pasos .actual > span { background:#7445ba; }
+.pago-layout { display:grid; grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); gap:26px; align-items:start; }
+.panel-resumen-pago { padding:20px; border:1px solid #e8dff1; border-radius:18px; background:linear-gradient(155deg,#faf7ff,#fff 78%); }
+.resumen-cabecera { display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:13px; color:#816e98; font-size:9px; font-weight:900; letter-spacing:1px; }
+.resumen-cabecera .pago-seguro { padding:6px 8px; border:1px solid #e8dff1; border-radius:30px; color:#65439a; background:#fff; font-size:9px; letter-spacing:0; }
+#pago-simulacion .resumen-pago { margin:0; padding:0; border:0; background:transparent; }
+#pago-simulacion .resumen-pago p { display:flex; flex-direction:column; gap:4px; margin:0; padding:10px 0; border-bottom:1px solid #ece5f3; color:#837792; font-size:10px; }
+#pago-simulacion .resumen-pago p strong { color:#39294b; font-size:12px; line-height:1.45; }
+#pago-simulacion .resumen-pago .total-pago { margin:6px 0 0; padding:14px 0 7px; border-top:0; border-bottom:0; }
+#pago-simulacion .resumen-pago .total-pago strong { color:#5e32a8; font-size:25px; letter-spacing:-.5px; }
+#pago-simulacion .resumen-pago .aprobacion-pago { margin:0; padding-top:10px; border-top:1px dashed #ded2ea; border-bottom:0; color:#6d806f; font-size:10px; }
+#pago-simulacion .aviso-simulacion { margin:16px 0 0; padding:11px 12px; border:1px solid #efe1b7; border-radius:11px; color:#715c31; background:#fffaf0; font-size:10px; }
+.form-pago-tarjeta { gap:12px; padding:2px 0; }
+.seccion-tarjeta-titulo { display:flex; align-items:center; justify-content:space-between; gap:10px; }
+.paso-formulario { color:#927daf; font-size:9px; font-weight:900; letter-spacing:1px; }
+#pago-simulacion .titulo-metodo-pago { margin:3px 0 0; font-size:14px; }
+.marcas-tarjeta { color:#67518a; font-size:10px; font-weight:900; letter-spacing:.4px; }
+.vista-tarjeta { position:relative; display:flex; min-height:153px; flex-direction:column; justify-content:space-between; overflow:hidden; padding:17px 19px 15px; border:1px solid #ffffff36; border-radius:17px; color:#fff; background:radial-gradient(ellipse at 90% 10%,#b891ef80,transparent 45%),linear-gradient(130deg,#26173e,#633aa0 65%,#8861bd); box-shadow:0 12px 25px #4324672b; }
+.vista-tarjeta::after { position:absolute; right:-44px; bottom:-94px; width:190px; height:190px; border:1px solid #ffffff26; border-radius:50%; content:''; }
+.vista-tarjeta-top,.vista-tarjeta-datos { position:relative; z-index:1; display:flex; align-items:center; justify-content:space-between; gap:10px; }
+.vista-tarjeta-top { font-size:10px; font-weight:900; letter-spacing:1.4px; }
+.chip-tarjeta { position:relative; z-index:1; width:29px; height:23px; border:1px solid #ffffff8c; border-radius:6px; background:linear-gradient(135deg,#f6e8b8,#c7a65d); }
+.chip-tarjeta i { position:absolute; inset:0 9px; border-right:1px solid #8f764b88; border-left:1px solid #8f764b88; }
+.vista-tarjeta > strong { position:relative; z-index:1; font-size:17px; font-weight:700; letter-spacing:1.3px; }
+.vista-tarjeta-datos { color:#efe8f7; font-size:8px; font-weight:800; letter-spacing:.7px; }
+.usar-datos-ejemplo { align-self:flex-start; padding:0; border:0; color:#6840a3; background:transparent; font-family:inherit; font-size:10px; font-weight:900; text-decoration:underline; text-underline-offset:3px; cursor:pointer; }
+.usar-datos-ejemplo:hover { color:#422071; }
+.form-pago-tarjeta label { gap:6px; color:#514262; font-size:10px; }
+.form-pago-tarjeta input { box-sizing:border-box; min-height:43px; padding:11px 12px; border-color:#ded4e9; border-radius:9px; font-size:12px; transition:border-color .15s,box-shadow .15s; }
+.form-pago-tarjeta input:focus { outline:0; border-color:#8053c0; box-shadow:0 0 0 3px #8653c51c; }
+.form-pago-tarjeta input[aria-invalid="true"] { border-color:#c84855; box-shadow:0 0 0 3px #c8485515; }
+.campo-codigo { position:relative; }
+.campo-codigo input { padding-right:70px; }
+.campo-codigo button { position:absolute; top:50%; right:7px; padding:6px 8px; transform:translateY(-50%); border:0; border-radius:6px; color:#68479a; background:#f6f1fb; font:inherit; font-size:9px; font-weight:900; cursor:pointer; }
+.form-pago-tarjeta .campos-dobles { gap:12px; margin:0; }
+.form-pago-tarjeta .boton { display:flex; align-items:center; justify-content:space-between; gap:12px; min-height:50px; margin-top:2px; padding:0 17px; border:0; border-radius:11px; font-size:13px; transition:filter .15s,transform .15s; }
+.form-pago-tarjeta .boton strong { font-size:14px; }
+.form-pago-tarjeta .boton:disabled { cursor:wait; opacity:.75; transform:none; }
+.form-pago-tarjeta .boton:focus-visible,.usar-datos-ejemplo:focus-visible,.campo-codigo button:focus-visible { outline:3px solid #a77be1; outline-offset:3px; }
+.form-pago-tarjeta .pago-consentimiento { display:flex; flex-direction:row; align-items:flex-start; gap:8px; color:#6e607b; font-size:10px; line-height:1.5; }
+.form-pago-tarjeta .pago-consentimiento input { min-height:auto; margin:2px 0 0; accent-color:#6e40b2; }
+.form-pago-tarjeta .pago-consentimiento { width:100%; justify-content:flex-start; cursor:pointer; }
+.form-pago-tarjeta .pago-consentimiento input[type="checkbox"] { box-sizing:border-box; display:block; width:17px; min-width:17px; height:17px; min-height:17px; flex:0 0 17px; margin:1px 0 0; padding:0; cursor:pointer; }
+.ayuda-datos-prueba { margin:-7px 0 0; color:#81728f; font-size:9px; line-height:1.45; }.ayuda-datos-prueba b { color:#5d4680; font-weight:800; }
+.usar-datos-ejemplo { padding:8px 11px; border:1px solid #ded0f1; border-radius:8px; background:#f8f4fd; text-decoration:none; }
+.pilares-confianza .icono-pilar { width:42px; height:42px; border:1px solid #e6d8fa; border-radius:13px; background:linear-gradient(145deg,#f3eaff,#e9dcff); }
+.pilares-confianza .icono-pilar svg { width:22px; height:22px; stroke:currentColor; stroke-linecap:round; stroke-linejoin:round; stroke-width:1.7; }
+.solicitud-agente input[type="number"] { appearance:textfield; -moz-appearance:textfield; }
+.solicitud-agente input[type="number"]::-webkit-inner-spin-button,.solicitud-agente input[type="number"]::-webkit-outer-spin-button { margin:0; -webkit-appearance:none; }
+.boton-enviar-whatsapp { display:block; margin:12px 0 8px; padding:12px 14px; border:1px solid #b9e4cb; border-radius:9px; color:#14683b; background:#effaf3; font-size:12px; font-weight:800; text-align:center; text-decoration:none; transition:background .15s,transform .15s; }
+.boton-enviar-whatsapp:hover { background:#e1f5e9; transform:translateY(-1px); }
+.boton-enviar-whatsapp[hidden] { display:none; }
+.form-pago-tarjeta .mensaje-checkout { padding:0; font-size:11px; }
+.pie-pago { font-size:9px; }
+.aviso-resenas-demo,.ficha-demo-aviso { padding:11px 13px; border:1px solid #e7d9f3; border-radius:9px; color:#65547a; background:#faf7fd; font-size:11px; line-height:1.55; }
+.aviso-resenas-demo { margin:0 0 16px; text-align:center; }
+.ficha-demo-aviso { margin:14px 0; }
+.etiqueta-oferta-demo { display:inline-flex; align-items:center; padding:9px 12px; border:1px solid #ffffff40; border-radius:999px; color:#fff; background:#ffffff18; font-size:11px; font-weight:800; }
+.redes-sociales { justify-content:center; text-align:center; }
+:focus-visible { outline:3px solid #a77be1; outline-offset:3px; }
+@media(prefers-reduced-motion:reduce) {
+  *,*::before,*::after { scroll-behavior:auto !important; animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; }
+}
+@media(max-width:760px) {
+  #pago-simulacion { padding:12px; }
+  #pago-simulacion .pago-contenido { max-height:calc(100vh - 24px); padding:23px 19px !important; border-radius:19px; }
+  #pago-simulacion .pago-pasos { justify-content:space-between; gap:6px; padding:10px; }
+  #pago-simulacion .pago-pasos li { gap:5px; font-size:9px; }
+  #pago-simulacion .pago-pasos li > span { width:19px; height:19px; }
+  .pago-layout { grid-template-columns:1fr; gap:18px; }
+  .panel-resumen-pago { padding:15px; }
+  #pago-simulacion .resumen-pago { display:grid; grid-template-columns:1fr 1fr; column-gap:14px; }
+  #pago-simulacion .resumen-pago .total-pago,#pago-simulacion .resumen-pago .aprobacion-pago { grid-column:1/-1; }
+  .vista-tarjeta { min-height:140px; }
+}
+@media(max-width:420px) {
+  #pago-simulacion .pago-pasos li { flex-direction:column; gap:3px; text-align:center; }
+  #pago-simulacion .resumen-pago { grid-template-columns:1fr; }
+  #pago-simulacion .resumen-pago .total-pago,#pago-simulacion .resumen-pago .aprobacion-pago { grid-column:auto; }
+}
+@media(min-width:761px) and (max-width:900px) {
+  #pago-simulacion .pago-contenido { width:min(720px,100%); }
+  .pago-layout { grid-template-columns:1fr; gap:18px; }
+  .panel-resumen-pago { padding:16px; }
+}
+#modal-plan-pagos { padding:20px; }
+#modal-plan-pagos .selector-plan-contenido { box-sizing:border-box; width:min(850px,100%); max-width:850px; max-height:calc(100vh - 40px); overflow-y:auto; padding:34px; border:1px solid #eee7f7; border-radius:22px; box-shadow:0 24px 70px #120b2166; }
+#modal-plan-pagos .selector-plan-contenido > .etiqueta { margin:0 0 6px; color:#784bb6; font-size:10px; font-weight:900; letter-spacing:.8px; text-transform:uppercase; }
+#modal-plan-pagos h2 { margin:0 36px 8px 0; color:#302044; font-size:clamp(24px,3vw,30px); letter-spacing:-.7px; }
+#modal-plan-pagos .intro-plan-pagos { max-width:600px; margin:0 0 20px; color:#746687; font-size:12px; line-height:1.55; }
+.plan-total-reserva { display:flex; align-items:center; justify-content:space-between; gap:12px; margin:0 0 17px; padding:14px 16px; border:1px solid #e7def0; border-radius:12px; color:#685875; background:#faf8fd; font-size:11px; }
+.plan-total-reserva strong { color:#6034a7; font-size:18px; white-space:nowrap; }
+.lista-opciones-plan { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+.opcion-plan-pago { display:flex; flex-direction:column; min-width:0; padding:17px; border:1px solid #e7deef; border-radius:15px; background:#fff; box-shadow:0 5px 18px #39224f0a; transition:border-color .16s,box-shadow .16s,transform .16s; }
+.opcion-plan-pago:not(.deshabilitada):hover { transform:translateY(-2px); border-color:#bda5db; box-shadow:0 10px 24px #39224f12; }
+.opcion-plan-top { display:flex; align-items:flex-start; justify-content:space-between; gap:10px; }
+.opcion-plan-top h3 { margin:0; color:#3e2b55; font-size:14px; line-height:1.35; }
+.opcion-plan-top > strong { color:#6034a7; font-size:14px; white-space:nowrap; }
+.opcion-plan-pago > p { margin:10px 0 0; color:#766887; font-size:10px; line-height:1.5; }
+.opcion-plan-pago .vista-previa-cronograma { flex:1; margin:13px 0; }
+.opcion-plan-pago .vista-previa-cronograma li { align-items:center; font-size:10px; }
+.opcion-plan-pago .vista-previa-cronograma li strong { color:#433253; }
+.opcion-plan-pago .boton { min-height:42px; margin-top:auto; border:0; border-radius:9px; color:#fff; background:linear-gradient(110deg,#6031aa,#8a4cdb); font-family:inherit; font-size:11px; font-weight:900; cursor:pointer; }
+.opcion-plan-pago .boton:hover { filter:brightness(1.07); }
+.opcion-plan-pago .boton:disabled { cursor:wait; opacity:.65; }
+.opcion-plan-pago.deshabilitada { border-style:dashed; background:#faf9fb; }
+.opcion-plan-pago.deshabilitada .opcion-plan-top > strong { color:#8b8194; }
+.opcion-plan-pago .plan-no-disponible { margin-top:auto; padding:10px; border-radius:9px; color:#786243; background:#fbf6e9; }
+.nota-modo-manual { margin:16px 0 0; padding:11px 13px; border-left:3px solid #8054bb; border-radius:0 9px 9px 0; color:#716181; background:#f8f4fc; font-size:10px; line-height:1.5; }
+@media(max-width:650px) {
+  #modal-plan-pagos { align-items:flex-start; padding:12px; }
+  #modal-plan-pagos .selector-plan-contenido { max-height:calc(100vh - 24px); margin:auto 0; padding:25px 18px; }
+  .lista-opciones-plan { grid-template-columns:1fr; }
+  .opcion-plan-pago { padding:15px; }
+}
+
+/* Paneles largos: el contenido desplaza por dentro sin cortar acciones */
+.carrito { height:100vh; height:100dvh; min-height:0; max-height:100dvh; overflow:hidden; padding-bottom:max(20px,env(safe-area-inset-bottom)); }
+.carrito-encabezado,.carrito-resumen { flex:0 0 auto; }
+.items-carrito { min-height:0; flex:1 1 auto; overflow-x:hidden; overflow-y:auto; overscroll-behavior:contain; scrollbar-gutter:stable; }
+.carrito-resumen { padding-bottom:calc(6px + env(safe-area-inset-bottom)); }
+.checkout { align-items:center; padding:20px; }
+.checkout .checkout-contenido { display:grid; grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); column-gap:26px; row-gap:12px; align-content:start; width:min(980px,100%); max-width:980px; max-height:calc(100dvh - 40px); overflow-x:hidden; overflow-y:auto; overscroll-behavior:contain; scrollbar-gutter:stable; }
+.checkout-cabecera,.checkout .pasos-checkout { grid-column:1/-1; }
+.checkout .checkout-cabecera { padding-right:42px; }
+.checkout .resumen-checkout { grid-column:1; align-self:start; }
+.checkout #form-checkout { grid-column:2; grid-row:3 / span 2; min-width:0; }
+.checkout .pasos-checkout { margin:7px 0 4px; }
+.checkout fieldset { min-width:0; }
+.checkout .campos-dobles { grid-template-columns:repeat(2,minmax(0,1fr)); }
+#panel-cuenta { right:0; top:0; width:min(820px,100vw); height:100vh; height:100dvh; min-height:0; max-height:100dvh; overflow:hidden; padding:32px clamp(22px,4vw,42px) max(20px,env(safe-area-inset-bottom)); border-left:1px solid #e9def4; }
+#panel-cuenta.abierto { display:flex; flex-direction:column; }
+#panel-cuenta > .etiqueta,#panel-cuenta > h2,#panel-cuenta > .tabs-cuenta { flex:0 0 auto; }
+#panel-cuenta > h2 { margin:0; padding-right:45px; font-size:30px; }
+#panel-cuenta > .tabs-cuenta { gap:9px; margin:17px 0 15px; padding-bottom:12px; border-bottom:1px solid #eee8f5; }
+#panel-cuenta > #contenido-cuenta { min-height:0; flex:1 1 auto; overflow-x:hidden; overflow-y:auto; overscroll-behavior:contain; padding:1px 4px 18px 0; scrollbar-gutter:stable; }
+.lista-reservas { gap:14px; }
+.reserva-cuenta { padding:18px; border-radius:14px; overflow-wrap:anywhere; }
+.reserva-cuenta h3 { font-size:15px; line-height:1.45; }
+.reserva-cuenta p { font-size:11px; }
+.cronograma-reserva { margin-top:16px; padding-top:14px; border-top:1px solid #e9e1f1; }
+.cronograma-reserva h4 { margin:0 0 12px; color:#39284f; font-size:16px; }
+.fila-cuota { display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:center; gap:10px 14px; padding:12px 0; border-bottom:1px solid #eee8f4; }
+.fila-cuota > span { min-width:0; margin:0; padding:0; border-radius:0; color:#4c3b60; background:transparent; font-size:11px; }
+.fila-cuota > span b,.fila-cuota > span small { display:block; margin:0; }
+.fila-cuota > span b { color:#38264e; font-size:11px; }
+.fila-cuota > span small { padding-top:4px; color:#847592; font-size:10px; }
+.fila-cuota > strong { align-self:start; padding-top:2px; white-space:nowrap; color:#49335e; font-size:12px; }
+.boton-pagar-cuota { grid-column:1/-1; display:flex; width:100%; min-height:47px; align-items:center; justify-content:space-between; gap:12px; padding:10px 14px; border:1px solid #6738b2; border-radius:11px; color:#fff; background:linear-gradient(105deg,#6032aa,#8850d0); box-shadow:0 6px 15px #6235a92b; font-family:inherit; font-size:12px; font-weight:900; text-align:left; cursor:pointer; transition:transform .16s,box-shadow .16s,filter .16s; }
+.boton-pagar-cuota::after { content:'→'; order:3; margin-left:auto; font-size:17px; }
+.boton-pagar-cuota:hover { transform:translateY(-1px); filter:brightness(1.06); box-shadow:0 9px 19px #6235a93a; }
+.boton-pagar-cuota:active { transform:translateY(0); }
+.boton-pagar-cuota:focus-visible { outline:3px solid #c8a8f3; outline-offset:3px; }
+.boton-pagar-cuota .texto-accion-pago { margin:0; padding:0; color:#fff; background:transparent; font-size:12px; }
+.boton-pagar-cuota .importe-accion-pago { order:2; margin:0; padding:5px 8px; border-radius:7px; color:#fff; background:#ffffff20; font-size:11px; white-space:nowrap; }
+.progreso-pagos { margin:12px 0 0 !important; padding:10px 12px; border-radius:9px; color:#655179 !important; background:#f5f0fa; font-size:10px !important; font-weight:700; }
+.historial-pagos { margin-top:10px; overflow:hidden; border:1px solid #e9e1f1; border-radius:10px; background:#fff; }
+.historial-pagos summary { display:flex; min-height:42px; align-items:center; gap:9px; padding:10px 12px; color:#5b4674; font-size:12px; font-weight:750; line-height:1.4; list-style:none; cursor:pointer; transition:background .16s,color .16s; }
+.historial-pagos summary::-webkit-details-marker { display:none; }
+.historial-pagos summary::before { content:''; width:8px; height:8px; flex:0 0 8px; border-right:2px solid #7544b4; border-bottom:2px solid #7544b4; transform:rotate(-45deg); transition:transform .16s; }
+.historial-pagos[open] summary { color:#4e2c80; background:#faf7fd; }
+.historial-pagos[open] summary::before { transform:rotate(45deg) translate(-2px,-2px); }
+.historial-pagos summary:hover { background:#f7f2fc; }
+.historial-pagos summary:focus-visible { outline:3px solid #c8a8f3; outline-offset:-3px; }
+.historial-pagos p { margin:0 !important; padding:10px 12px; border-top:1px solid #eee8f4; color:#746581 !important; font-size:10px !important; }
+.pie-enlaces { display:flex; align-items:center; flex-wrap:wrap; justify-content:flex-end; gap:16px; }
+@media(max-width:760px) {
+  .carrito { width:100%; padding:18px 18px max(16px,env(safe-area-inset-bottom)); }
+  .checkout { align-items:flex-start; padding:12px; }
+  .checkout .checkout-contenido { grid-template-columns:minmax(0,1fr); row-gap:10px; width:100%; max-height:calc(100dvh - 24px); margin:0 auto; padding:25px 20px 22px; }
+  .checkout-cabecera,.checkout .pasos-checkout,.checkout .resumen-checkout,.checkout #form-checkout { grid-column:1; grid-row:auto; }
+  .checkout .campos-dobles { grid-template-columns:minmax(0,1fr); }
+  #panel-cuenta { width:100vw; padding:26px 20px max(16px,env(safe-area-inset-bottom)); }
+  #panel-cuenta > h2 { font-size:27px; }
+  #panel-cuenta > .tabs-cuenta { overflow-x:auto; }
+  #panel-cuenta > #contenido-cuenta { padding-right:1px; }
+  .reserva-cuenta { padding:15px; }
+}
+@media(max-width:390px) {
+  .fila-cuota { grid-template-columns:minmax(0,1fr); gap:8px; }
+  .fila-cuota > strong { grid-row:2; padding:0 0 2px; }
+  .boton-pagar-cuota { grid-row:3; }
+  .pie-enlaces { justify-content:flex-start; gap:12px; }
+}
+#estado-copiar-link { min-height:1.5em; }
+.form-pago-tarjeta .boton { width:min(100%,380px); align-self:center; justify-content:center; flex-wrap:wrap; gap:8px 14px; text-align:center; }
+.ayuda-datos-prueba { display:block; margin:-5px 0 0; line-height:1.65; }
+.pie-pago { max-width:380px; align-self:center; line-height:1.5; }
+.aviso-simulacion,#pago-simulacion .aviso-simulacion { margin:10px 0 0; padding:0; border:0; border-radius:0; color:#81728f; background:transparent; font-size:10px; line-height:1.5; }
+#aviso-confirmacion:empty { display:none; }
+.preparacion-viaje { margin-top:18px; padding:18px; border:1px solid #e2d4f2; border-radius:14px; background:linear-gradient(145deg,#fff,#faf7fe); }
+.preparacion-cabecera { display:flex; align-items:flex-start; justify-content:space-between; gap:16px; padding-bottom:15px; border-bottom:1px solid #eee7f5; }
+.reserva-cuenta .preparacion-etiqueta,.reserva-cuenta .ruta-viaje-cabecera span,.reserva-cuenta .progreso-checklist { display:block; margin:0; padding:0; border:0; border-radius:0; color:#7553a0; background:transparent; font-size:10px; font-weight:800; }
+.preparacion-cabecera h4 { margin:5px 0; color:#342348; font-size:19px; }
+.preparacion-cabecera p { margin:0; color:#7b6b8d; font-size:11px; }
+.boton-comprobante { flex:0 0 auto; padding:10px 13px; border:1px solid #d9c8ed; border-radius:9px; color:#6037a0; background:#fff; font:inherit; font-size:10px; font-weight:800; cursor:pointer; }
+.boton-comprobante:hover { background:#f3ecfb; }
+.preparacion-rutas { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr)); gap:12px; margin:15px 0; }
+.ruta-viaje { padding:14px; border:1px solid #eee6f5; border-radius:11px; background:#fff; }
+.ruta-viaje-cabecera h4 { margin:5px 0 0; color:#3d2b52; font-size:13px; }
+.ruta-viaje-ciudades { margin:8px 0 !important; color:#67439b !important; font-weight:700; }
+.ruta-viaje ol,.incluye-viaje ul { margin:10px 0 0; padding-left:18px; color:#6f617f; font-size:10px; line-height:1.65; }
+.ruta-viaje li+li { margin-top:4px; }
+.incluye-viaje { margin-top:12px; padding-top:10px; border-top:1px solid #f0ebf5; color:#5d4a72; font-size:10px; }
+.incluye-viaje ul { margin-top:5px; }
+.checklist-viaje { padding:14px; border-radius:11px; background:#f5f0fa; }
+.checklist-viaje-titulo { display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:8px; color:#49365f; font-size:11px; }
+.item-check-viaje { display:flex; align-items:flex-start; gap:9px; padding:8px 0; border-top:1px solid #e8e0f0; color:#665676; font-size:10px; line-height:1.45; cursor:pointer; }
+.item-check-viaje input { width:16px; height:16px; flex:0 0 16px; margin:0; accent-color:#673bb1; }
+.item-check-viaje:has(input:checked) span { color:#4c3c60; text-decoration:line-through; text-decoration-color:#a993c4; }
+@media(max-width:560px) { .preparacion-viaje { padding:14px; }.preparacion-cabecera { flex-direction:column; }.boton-comprobante { width:100%; }.checklist-viaje-titulo { align-items:flex-start; flex-direction:column; gap:3px; } }
+.lista-resenas { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
+.lista-resenas article { display:grid; grid-template-columns:48px minmax(0,1fr); align-items:start; gap:0 14px; width:auto; min-height:190px; padding:25px; border:1px solid #e5d9f4; border-radius:16px; background:linear-gradient(145deg,#fff 0%,#fcfaff 100%); box-shadow:0 10px 26px #3216570d; }
+.lista-resenas article:hover { transform:none; border-color:#e5d9f4; box-shadow:0 10px 26px #3216570d; }
+.lista-resenas .valor-icono { display:grid; width:44px; height:44px; place-items:center; border:1px solid #e2d3fa; border-radius:14px; color:#6939bb; background:linear-gradient(145deg,#f2eaff,#e8dbff); }
+.valor-icono svg { width:23px; height:23px; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+.lista-resenas article > div { align-self:center; }
+.lista-resenas h3 { margin:0 0 7px; color:#342249; font-size:15px; line-height:1.3; }
+.lista-resenas p { margin:0; color:#6d5c80; font-size:12px; line-height:1.6; }
+.lista-resenas article > small { grid-column:2; margin-top:16px; padding-top:12px; border-top:1px solid #eee8f5; color:#7544bd; font-size:10px; font-weight:700; line-height:1.4; }
+@media(max-width:760px) { .lista-resenas { grid-template-columns:1fr; gap:12px; }.lista-resenas article { min-height:0; padding:19px; } }
+.selector-metodo-pago { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; }
+.metodo-pago-opcion { display:flex; min-height:60px; align-items:center; justify-content:center; gap:7px; padding:8px; border:1px solid #e2d8ec; border-radius:11px; color:#625273; background:#fff; font:inherit; font-size:10px; font-weight:800; cursor:pointer; }
+.metodo-pago-opcion > span { color:#7042b4; font-size:17px; }
+.metodo-pago-opcion.activo { border-color:#8453c4; color:#5d32a2; background:#f7f1ff; box-shadow:0 0 0 2px #8453c415; }
+.metodo-pago-panel[hidden] { display:none !important; }
+.metodo-pago-info { display:flex; align-items:flex-start; gap:14px; min-height:190px; padding:22px; border:1px solid #e6dcef; border-radius:14px; background:linear-gradient(145deg,#fcfaff,#f7f2fc); }
+.metodo-pago-simbolo,.marca-mercadopago { display:grid; width:46px; height:46px; flex:0 0 46px; place-items:center; border-radius:14px; color:#6638ad; background:#ece1fa; font-size:24px; font-weight:900; }
+.metodo-pago-info h3 { margin:4px 0 8px; color:#38264e; font-size:14px; }
+.metodo-pago-info p { margin:0; color:#736584; font-size:11px; line-height:1.6; }
+.marca-mercadopago { border-radius:50%; color:#1648a0; background:#c9e8ff; font-size:15px; letter-spacing:-1px; }
+@media(max-width:520px) { .selector-metodo-pago { gap:5px; }.metodo-pago-opcion { min-height:56px; flex-direction:column; gap:2px; padding:6px 3px; font-size:9px; }.metodo-pago-info { min-height:160px; padding:17px; } }
+.pago-layout > * { min-width:0; }
+.form-pago-tarjeta { min-width:0; gap:14px; padding:18px; border:1px solid #ece5f3; border-radius:17px; background:#fdfcff; }
+.selector-metodo-pago { margin:1px 0 3px; }
+.metodo-pago-opcion { min-width:0; white-space:nowrap; }
+.metodo-pago-panel { min-width:0; }
+.metodo-pago-panel .seccion-tarjeta-titulo { margin:1px 0 2px; }
+.form-pago-tarjeta label { min-width:0; gap:8px; }
+.form-pago-tarjeta .campos-dobles { grid-template-columns:repeat(2,minmax(0,1fr)); }
+.form-pago-tarjeta input { min-width:0; }
+.vista-tarjeta { width:100%; min-width:0; margin:2px 0 3px; }
+.metodo-pago-panel#panel-metodo-tarjeta { display:flex; flex-direction:column; gap:13px; }
+.metodo-pago-panel#panel-metodo-tarjeta label { margin:0; }
+.metodo-pago-panel#panel-metodo-tarjeta .vista-tarjeta { margin:2px 0 5px; }
+.metodo-pago-panel#panel-metodo-tarjeta .campos-dobles { margin-top:1px; }
+@media(max-width:760px) { .form-pago-tarjeta { padding:15px; }.form-pago-tarjeta .campos-dobles { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:390px) { .form-pago-tarjeta { padding:12px; }.form-pago-tarjeta .campos-dobles { grid-template-columns:1fr; }.metodo-pago-opcion { white-space:normal; text-align:center; } }
+
+/* Claridad de saldos y herramientas de revisión. */
+.resumen-proximo-pago,.pago-pendiente-confirmacion { margin:12px 0 !important; padding:12px 14px; border:1px solid #e7dcf2; border-radius:10px; color:#58436f !important; background:#faf7fd; font-size:12px !important; line-height:1.55; }
+.pago-pendiente-confirmacion { border-color:#f0d9a8; background:#fffaf0; }
+.pago-rechazado { margin:12px 0 !important; padding:12px 14px; border:1px solid #efd5d9; border-radius:10px; color:#873544 !important; background:#fff7f8; font-size:12px !important; line-height:1.55; }
+.busqueda-asesor { display:grid; gap:7px; margin:14px 0 20px; color:#514064; font-size:12px; font-weight:750; }
+.busqueda-asesor input { width:100%; min-height:44px; padding:10px 13px; border:1px solid #ded2eb; border-radius:9px; font:inherit; }
+.pagos-por-confirmar { margin:16px 0 24px; padding:16px; border:1px solid #eadff5; border-radius:13px; background:#faf7fd; }
+.pagos-por-confirmar > h3 { margin:0 0 12px; color:#39244f; font-size:16px; }
+.pagos-por-confirmar > h3 span { display:inline-grid; min-width:24px; height:24px; margin-left:5px; place-items:center; border-radius:50%; color:#fff; background:#7040b6; font-size:12px; }
+.pago-agente-pendiente { display:flex; align-items:center; justify-content:space-between; gap:14px; margin-top:9px; padding:13px; border:1px solid #e9e0f1; border-radius:10px; background:#fff; }
+.pago-agente-pendiente p { margin:5px 0; color:#655276; font-size:12px; }
+.pago-agente-pendiente small,.registro-historial-agente small { color:#837495; font-size:10px; }
+.acciones-revision-pago { display:flex; flex-wrap:wrap; gap:7px; }
+.pago-agente-pendiente button { min-height:40px; padding:9px 14px; border:0; border-radius:8px; color:#fff; background:#6838b4; font:inherit; font-size:12px; font-weight:800; cursor:pointer; }
+.pago-agente-pendiente button.rechazar-pago { border:1px solid #eed1d6; color:#a33343; background:#fff7f8; }
+.registro-historial-agente { padding:11px 0; border-bottom:1px solid #eee7f4; }
+.estimacion-agente { padding:9px 11px; border-radius:8px; color:#57436f; background:#faf7fd; font-size:12px; }
+.registro-historial-agente p { margin:4px 0; }
+.busqueda-asesor input:focus-visible,.pago-agente-pendiente button:focus-visible { outline:3px solid #c8a8f3; outline-offset:2px; }
+@media(max-width:520px) { .pago-agente-pendiente { align-items:stretch; flex-direction:column; }.acciones-revision-pago { flex-direction:column; }.pago-agente-pendiente button { width:100%; } }
+@media(prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto !important; animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; } }
+
+/* Asistente de viajes: respuestas con opciones directas y cómodas en móvil. */
+.chat { display:none; max-height:min(650px,calc(100dvh - 36px)); flex-direction:column; }
+.chat.abierto { display:flex; }
+.chat-controles { display:flex; align-items:center; gap:3px; }
+.chat-controles button { display:grid; width:34px; height:34px; place-items:center; border-radius:8px; }
+.chat-controles button:hover { background:#ffffff20; }
+.chat-mensajes { display:flex; height:auto; min-height:150px; flex:1 1 auto; flex-direction:column; gap:8px; overscroll-behavior:contain; }
+.chat-mensajes p { flex:0 0 auto; }
+.chat-recomendaciones { display:grid; width:100%; gap:7px; }
+.chat-recomendacion { display:grid; gap:5px; padding:10px; border:1px solid #e5d9f1; border-radius:10px; background:#fff; }
+.chat-recomendacion strong { color:#38234f; font-size:11px; }
+.chat-recomendacion small { color:#756486; font-size:10px; line-height:1.45; }
+.chat-acciones-viaje,.chat-acciones-respuesta { display:flex; flex-wrap:wrap; gap:6px; }
+.chat-acciones-viaje button,.chat-acciones-respuesta button { min-height:32px; padding:6px 9px; border:1px solid #dfd1ee; border-radius:8px; color:#6035a4; background:#f8f3ff; font:inherit; font-size:10px; font-weight:750; cursor:pointer; }
+.chat-acciones-viaje button:first-child { color:#fff; border-color:#693ab1; background:#693ab1; }
+.chat-acciones-viaje button:hover,.chat-acciones-respuesta button:hover { border-color:#9b73cc; background:#eee3fc; }
+.chat-acciones-viaje button:first-child:hover { background:#542b96; }
+.chat-mensajes button:focus-visible,.chat-controles button:focus-visible,#form-chat input:focus-visible,#form-chat button:focus-visible { outline:3px solid #c8a8f3; outline-offset:2px; }
+#form-chat button:disabled { opacity:.55; cursor:wait; }
+@media(max-width:760px) { .chat { max-height:calc(100dvh - 98px); }.chat-mensajes { min-height:130px; } }
+
+/* Presentación refinada del asistente y controles de conversación. */
+.chat { overflow:hidden; border:1px solid #e8ddf3; border-radius:18px; box-shadow:0 20px 65px #25143c38; }
+.chat-top { align-items:center; min-height:66px; padding:12px 14px; background:linear-gradient(120deg,#4a2878,#7843ba); }
+.chat-identidad { display:flex; min-width:0; align-items:center; gap:10px; }
+.chat-identidad > span:last-child { display:grid; gap:3px; }
+.chat-identidad strong { font-size:13px; }
+.chat-identidad small { color:#eee3fb; font-size:10px; font-weight:500; }
+.chat-avatar { display:grid; width:36px; height:36px; flex:0 0 36px; place-items:center; border:1px solid #ffffff40; border-radius:12px; color:#fff; background:#ffffff20; font-size:19px; }
+.chat-boton { display:flex; align-items:center; gap:8px; padding:13px 17px; box-shadow:0 8px 22px #48227645; }
+.chat-boton span { font-size:17px; }
+.chat-mensajes { padding:14px; background:#fbf9fd; scrollbar-color:#d7c6e9 transparent; }
+.chat-mensajes p { line-height:1.5; }
+.chat-mensajes .mensaje-escribiendo { position:relative; color:#756486; font-style:italic; }
+.chat-mensajes .mensaje-escribiendo::after { content:""; display:inline-block; width:5px; height:5px; margin-left:5px; border-radius:50%; background:#8956c3; animation:chat-pulso 1s infinite alternate; }
+@keyframes chat-pulso { to { opacity:.25; } }
+.opciones-chat { display:flex; flex-wrap:wrap; gap:6px; padding:0 12px 10px; background:#fbf9fd; }
+.opciones-chat button { min-height:30px; padding:6px 9px; border:1px solid #e2d5ef; border-radius:999px; color:#6035a4; background:#fff; font:inherit; font-size:10px; font-weight:700; cursor:pointer; }
+.opciones-chat button:hover { border-color:#9b73cc; background:#f3ebfc; }
+#form-chat { align-items:center; padding:11px 12px; border-top:1px solid #eee7f4; background:#fff; }
+#form-chat input { min-height:42px; padding:10px 12px; border-color:#e5d9f0; border-radius:11px; font:inherit; font-size:12px; }
+#form-chat button { display:grid; width:40px; height:40px; flex:0 0 40px; place-items:center; border-radius:11px; background:#6f3bc9; font-size:18px; }
+.chat-controles button { color:#fff; font-size:19px; }
+.chat-controles button:disabled { opacity:.55; cursor:wait; }
+.chat-controles button:hover { color:#fff; background:#ffffff24; }
+.chat-boton:focus-visible,.opciones-chat button:focus-visible { outline:3px solid #c8a8f3; outline-offset:3px; }
+@media(max-width:420px) { .chat { right:10px; bottom:10px; width:calc(100% - 20px); max-width:none; max-height:calc(100dvh - 82px); }.chat-boton { right:14px; bottom:74px; }.chat-mensajes { min-height:110px; }.opciones-chat { gap:5px; }.opciones-chat button { font-size:9px; } }
+@media(prefers-reduced-motion:reduce) { .chat-mensajes .mensaje-escribiendo::after { animation:none; } }
